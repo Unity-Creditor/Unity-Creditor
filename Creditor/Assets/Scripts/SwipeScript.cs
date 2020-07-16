@@ -7,6 +7,8 @@ using UnityEngine.Events;
 public class SwipeScript : MonoBehaviour
 {
    public UnityEvent OnSwipe = new UnityEvent();
+   public UnityEvent SwipeYes = new UnityEvent();
+   public int Score = 0;
    bool MouseDown = false;
 
    public void OnMouseDown()
@@ -17,9 +19,18 @@ public class SwipeScript : MonoBehaviour
    public void OnMouseUp()
    {
      MouseDown = false;
-     if (Mathf.Abs(transform.position.x) >= 1.25f)
+     if (transform.position.x >= 1.25f)
      {
-       Debug.Log("I am here");
+       GameObject.FindWithTag("GameController").GetComponent<RulesScript>().RightSpriteFunc();
+
+       Debug.Log("Yes");
+       OnSwipe.Invoke();
+       //SwipeYes.Invoke();
+       Destroy(gameObject);
+     }
+     else if (transform.position.x <= -1.25f)
+     {
+       Debug.Log("No");
        OnSwipe.Invoke();
        Destroy(gameObject);
      }

@@ -86,6 +86,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  SwipeYes:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3896938975209167001, guid: 089d9ba6898794b45b1cee7645204482,
+          type: 3}
+        m_MethodName: RightSpriteFunc
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  Score: 0
 --- !u!114 &250445388270803708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,7 +120,3 @@ MonoBehaviour:
   - {fileID: 2350297534053388759, guid: 3166190413495254a97e30680de154ec, type: 3}
   - {fileID: 8507980137252276012, guid: 8140ef1ca6aeb27489e33f61d8235e36, type: 3}
   - {fileID: 7477005705412488926, guid: 9dd768d999fb20445bf2e57529505d6f, type: 3}
-  CreditHistoryColor:
-  - {r: 0.2947084, g: 0.735849, b: 0.2256141, a: 0}
-  - {r: 0.9622642, g: 0.81580913, b: 0.44028127, a: 0}
-  - {r: 0.8396226, g: 0.36040404, b: 0.36040404, a: 0}
