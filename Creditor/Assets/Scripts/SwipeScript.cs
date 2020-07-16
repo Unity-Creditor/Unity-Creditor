@@ -21,7 +21,6 @@ public class SwipeScript : MonoBehaviour
      {
        Debug.Log("I am here");
        OnSwipe.Invoke();
-       Destroy(transform.GetChild(0).gameObject);
        Destroy(gameObject);
      }
      else

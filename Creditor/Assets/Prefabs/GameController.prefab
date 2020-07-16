@@ -44,4 +44,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Visiter: {fileID: 4054732016449778611, guid: a0818739b226fee43b7587f5207b32f1, type: 3}
+  Indicator: {fileID: 0}
   Spawn: {x: 0, y: 0, z: 0}
+  actualPosition: {x: 0, y: 0.2, z: 0}
+  CreditHistoryColor:
+  - {r: 0.029686406, g: 0.6792453, b: 0, a: 1}
+  - {r: 1, g: 0.6916563, b: 0.28773582, a: 1}
+  - {r: 0.9245283, g: 0.45790315, b: 0.45790315, a: 1}
+  Indicators:
+  - 
+  - 
+  - 

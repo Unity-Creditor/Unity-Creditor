@@ -103,6 +103,7 @@ MonoBehaviour:
   faces:
   - {fileID: 2350297534053388759, guid: 3166190413495254a97e30680de154ec, type: 3}
   - {fileID: 8507980137252276012, guid: 8140ef1ca6aeb27489e33f61d8235e36, type: 3}
+  - {fileID: 7477005705412488926, guid: 9dd768d999fb20445bf2e57529505d6f, type: 3}
   CreditHistoryColor:
   - {r: 0.2947084, g: 0.735849, b: 0.2256141, a: 0}
   - {r: 0.9622642, g: 0.81580913, b: 0.44028127, a: 0}
