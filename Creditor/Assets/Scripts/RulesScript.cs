@@ -19,7 +19,7 @@ public class RulesScript : MonoBehaviour
     {
       Debug.Log(localScore);
       //Debug.Log(localScore.ActualCreditHistory);
-      ScorePoint += localScore - 1;
+      ScorePoint += localScore - 2;
     }
   }
 }

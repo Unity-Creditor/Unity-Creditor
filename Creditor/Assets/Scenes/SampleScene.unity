@@ -532,17 +532,17 @@ PrefabInstance:
     - target: {fileID: 3015293933697112469, guid: 089d9ba6898794b45b1cee7645204482,
         type: 3}
       propertyPath: CreditHistoryColor.Array.data[0].r
-      value: 0.24900003
+      value: 0.74509805
       objectReference: {fileID: 0}
     - target: {fileID: 3015293933697112469, guid: 089d9ba6898794b45b1cee7645204482,
         type: 3}
       propertyPath: CreditHistoryColor.Array.data[0].g
-      value: 0.5943396
+      value: 0.25490198
       objectReference: {fileID: 0}
     - target: {fileID: 3015293933697112469, guid: 089d9ba6898794b45b1cee7645204482,
         type: 3}
       propertyPath: CreditHistoryColor.Array.data[0].b
-      value: 0.2214756
+      value: 0.26666668
       objectReference: {fileID: 0}
     - target: {fileID: 3015293933697112469, guid: 089d9ba6898794b45b1cee7645204482,
         type: 3}
@@ -562,17 +562,17 @@ PrefabInstance:
     - target: {fileID: 3015293933697112469, guid: 089d9ba6898794b45b1cee7645204482,
         type: 3}
       propertyPath: CreditHistoryColor.Array.data[2].r
-      value: 0.8396226
+      value: 0.03137255
       objectReference: {fileID: 0}
     - target: {fileID: 3015293933697112469, guid: 089d9ba6898794b45b1cee7645204482,
         type: 3}
       propertyPath: CreditHistoryColor.Array.data[2].g
-      value: 0.17030083
+      value: 0.6784314
       objectReference: {fileID: 0}
     - target: {fileID: 3015293933697112469, guid: 089d9ba6898794b45b1cee7645204482,
         type: 3}
       propertyPath: CreditHistoryColor.Array.data[2].b
-      value: 0.17030083
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3015293933697112469, guid: 089d9ba6898794b45b1cee7645204482,
         type: 3}
