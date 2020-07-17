@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class RulesScript : Manager<RulesScript>
 {
     public int ScorePoint = 0;
     bool RightSwipe = true;
     public int localScore;
-    public Text score;
+    public TextMeshProUGUI score;
 
     void Start()
     {
