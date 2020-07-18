@@ -44,10 +44,11 @@ public class NextVisiter : MonoBehaviour
       Indicator = GameObject.FindWithTag("Indicator");
 
       var CreatedVisiter = Instantiate(Visiter, Spawn, Quaternion.identity);
-      ActualCreditHistory = Random.Range(0, 3);
-      //Debug.Log(ActualCreditHistory);
+/*        ActualCreditHistory = Random.Range(0, 3);
+*/        ActualCreditHistory = Random.Range(0, 4);
+        //Debug.Log(ActualCreditHistory);
 
-      Graph = Random.Range(0, 10);
+        Graph = Random.Range(0, 10);
 
       //GraphGenerator(Graph);
 
@@ -56,7 +57,8 @@ public class NextVisiter : MonoBehaviour
 
       RulesScript.Instance.localScore = ActualCreditHistory + ActualGraph;
 
-      Indicator.GetComponent<SpriteRenderer> ().color = Color.Lerp(Indicator.GetComponent<SpriteRenderer> ().color, CreditHistoryColor[ActualCreditHistory], 1);
+        CreditHistorySCR.Instance.SetHistory(ActualCreditHistory);
+      //Indicator.GetComponent<SpriteRenderer> ().color = Color.Lerp(Indicator.GetComponent<SpriteRenderer> ().color, CreditHistoryColor[ActualCreditHistory], 1);
     }
 
 

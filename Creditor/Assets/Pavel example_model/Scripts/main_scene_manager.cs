@@ -38,7 +38,7 @@ public class main_scene_manager : MonoBehaviour
             .GetComponent<SpriteRenderer>().sortingOrder = 10;
 
         Instantiate(hair[Random.Range(0, hair.Length)], new Vector2(transform.position.x + hairPlace.x, transform.position.y + hairPlace.y), transform.rotation, transform)
-            .GetComponent<SpriteRenderer>().sortingOrder = 10;
+            .GetComponent<SpriteRenderer>().sortingOrder = 20;
 
         Instantiate(body[Random.Range(0, body.Length)], new Vector2(transform.position.x + bodyPlace.x, transform.position.y + bodyPlace.y), transform.rotation, transform)
             .GetComponent<SpriteRenderer>().sortingOrder = 5;

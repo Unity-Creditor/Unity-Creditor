@@ -21,7 +21,7 @@ public class RulesScript : Manager<RulesScript>
             Debug.Log(localScore);
             //Debug.Log(localScore.ActualCreditHistory);
             ScorePoint += localScore - 2;
-            score.text = "Score: " + ScorePoint;
+            score.text = ScorePoint.ToString();
         }
     }
 }
