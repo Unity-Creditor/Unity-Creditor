@@ -43,7 +43,7 @@ public class NextVisiter : MonoBehaviour
 
       Indicator = GameObject.FindWithTag("Indicator");
 
-      var CreatedVisiter = Instantiate(Visiter, Spawn, Quaternion.identity);
+      var CreatedVisiter = Instantiate(Visiter, Spawn, Quaternion.identity,transform);
 /*        ActualCreditHistory = Random.Range(0, 3);
 */        ActualCreditHistory = Random.Range(0, 4);
         //Debug.Log(ActualCreditHistory);
