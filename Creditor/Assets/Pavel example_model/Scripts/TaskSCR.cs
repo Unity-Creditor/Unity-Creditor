@@ -8,11 +8,12 @@ public class TaskSCR : Manager<TaskSCR>
     public Image buttonImage;
     public float visibleSpeed;
     public GameObject scene;
+    public bool isTask;
     void Start()
     {
         image = GetComponent<Image>();
         image.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
-
+        isTask = true;
         buttonImage = GetComponentInChildren<Image>();
         buttonImage.color = new Color(buttonImage.color.r, buttonImage.color.g, buttonImage.color.b, 0f);
 
@@ -24,7 +25,9 @@ public class TaskSCR : Manager<TaskSCR>
     public void StartMakeVisible()
     {
         scene.SetActive(false);
+
         buttonImage.gameObject.SetActive(true);
+        FindObjectOfType<VisiterAwake>().gameObject.SetActive(false);
         //image.gameObject.SetActive(true);
        // StartCoroutine(makeVisible());
     }
@@ -49,6 +52,8 @@ public class TaskSCR : Manager<TaskSCR>
         //image.gameObject.SetActive(false);
         scene.SetActive(true);
         //StartCoroutine(makeInvisible());
+/*        FindObjectOfType<VisiterAwake>().gameObject.SetActive(true);*/
+
     }
 
     IEnumerator makeInvisible()

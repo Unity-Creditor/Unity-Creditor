@@ -1,21 +1,19 @@
 ﻿using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class EnderSCR : Manager<EnderSCR>
 {
     public int maxScore;
     public Image[] images;
+    public int part;
+    public UnityEvent end;
 
-    // Start is called before the first frame update
     void Start()
     {
         ImageDisabler();
+        part = maxScore / images.Length;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     void ImageDisabler()
     {
         foreach (Image i in images)
@@ -26,30 +24,31 @@ public class EnderSCR : Manager<EnderSCR>
 
     public void ChangeStars(int score)
     {
-        if (score < maxScore / 5 * 1)
+        if (score < maxScore / part * 1)
+        {
+            ImageDisabler();
+            images[0].gameObject.SetActive(true);
+        }
+        if (score > part * 1 && score < part * 2)
         {
             ImageDisabler();
             images[1].gameObject.SetActive(true);
         }
-        if (score > maxScore / 5 * 1 && score < maxScore / 5 * 2)
+        if (score > part * 2 && score < part * 3)
         {
             ImageDisabler();
             images[2].gameObject.SetActive(true);
         }
-        if (score > maxScore / 5 * 2 && score < maxScore / 5 * 3)
+        if (score > part * 3 && score < maxScore-1)
         {
             ImageDisabler();
             images[3].gameObject.SetActive(true);
         }
-        if (score > maxScore / 5 * 3 && score < maxScore / 5 * 5-1)
+        if (/*score > maxScore / 5 * 4 &&*/score >= maxScore)
         {
             ImageDisabler();
             images[4].gameObject.SetActive(true);
-        }
-        if (/*score > maxScore / 5 * 4 &&*/score == maxScore / 5 * 5)
-        {
-            ImageDisabler();
-            images[5].gameObject.SetActive(true);
+            end.Invoke();
         }
     }
 }
