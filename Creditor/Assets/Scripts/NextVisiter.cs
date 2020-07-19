@@ -31,16 +31,18 @@ public class NextVisiter : MonoBehaviour
             LaptopScript.Instance.ChangeGraph(ActualGraph);
         }
 
+        ActualCreditHistory = Random.Range(0, 3);
+        CreditHistorySCR.Instance.SetHistory(ActualCreditHistory);
+
         //Indicator = GameObject.FindWithTag("Indicator");
 
         var CreatedVisiter = Instantiate(Visiter, Spawn, Quaternion.identity/*, transform*/);
         //CreatedVisiter.transform.parent = gameObject.transform;
-        ActualCreditHistory = Random.Range(0, 3);
 
 
         RulesScript.Instance.localScore = ActualCreditHistory + ActualGraph;
 
-        CreditHistorySCR.Instance.SetHistory(ActualCreditHistory);
+
         //Indicator.GetComponent<SpriteRenderer> ().color = Color.Lerp(Indicator.GetComponent<SpriteRenderer> ().color, CreditHistoryColor[ActualCreditHistory], 1);
     }
 }

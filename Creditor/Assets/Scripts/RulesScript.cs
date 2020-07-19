@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using TMPro;
+﻿using TMPro;
+using UnityEngine;
 
 public class RulesScript : Manager<RulesScript>
 {
@@ -8,7 +8,11 @@ public class RulesScript : Manager<RulesScript>
     public int localScore;
     public TextMeshProUGUI score;
 
+    private void Start()
+    {
+        EnderSCR.Instance.ChangeStars(ScorePoint);
 
+    }
     public void RightSpriteFunc()
     {
         if (RightSwipe)
@@ -17,6 +21,7 @@ public class RulesScript : Manager<RulesScript>
             //Debug.Log(localScore.ActualCreditHistory);
             ScorePoint += localScore - 2;
             score.text = ScorePoint.ToString();
+            EnderSCR.Instance.ChangeStars(ScorePoint);
         }
     }
 }

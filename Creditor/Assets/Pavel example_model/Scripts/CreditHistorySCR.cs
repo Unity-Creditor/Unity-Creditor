@@ -2,6 +2,8 @@
 
 public class CreditHistorySCR : Manager<CreditHistorySCR>
 {
+    public int actualHistory;
+
     public GameObject _0;
     public GameObject _1;
     public GameObject _2;
@@ -13,9 +15,11 @@ public class CreditHistorySCR : Manager<CreditHistorySCR>
         _1.SetActive(false);
         _2.SetActive(false);
         _3.SetActive(false);
+        //SetHistory()
     }
     public void SetHistory(int quality)
     {
+        actualHistory = quality;
         if (quality == 0)
         {
             _0.SetActive(true);
