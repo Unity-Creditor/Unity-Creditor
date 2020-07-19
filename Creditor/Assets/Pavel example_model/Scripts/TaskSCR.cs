@@ -8,15 +8,16 @@ public class TaskSCR : Manager<TaskSCR>
     public Image buttonImage;
     public float visibleSpeed;
     public GameObject scene;
+    public GameObject winPanel;
     public bool isTask;
     void Start()
     {
         image = GetComponent<Image>();
-        image.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
+/*        image.color = new Color(image.color.r, image.color.g, image.color.b, 0f);*/
         isTask = true;
         buttonImage = GetComponentInChildren<Image>();
         buttonImage.color = new Color(buttonImage.color.r, buttonImage.color.g, buttonImage.color.b, 0f);
-
+        winPanel.SetActive(false);
         scene.SetActive(false);
 
         StartCoroutine(makeVisible());

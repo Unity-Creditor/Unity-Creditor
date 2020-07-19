@@ -46,12 +46,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Visiter: {fileID: 4054732016449778611, guid: a0818739b226fee43b7587f5207b32f1, type: 3}
   Indicator: {fileID: 0}
+  ScreenGraph: {fileID: 0}
   Spawn: {x: 0, y: 0, z: 0}
   actualPosition: {x: 0, y: 0.2, z: 0}
   CreditHistoryColor:
   - {r: 0.745283, g: 0.25663045, b: 0.26671898, a: 1}
   - {r: 1, g: 0.6916563, b: 0.28773582, a: 1}
   - {r: 0.03137255, g: 0.6784314, b: 0, a: 1}
+  Graph: 100
+  ActualGraph: 0
   ActualCreditHistory: 0
 --- !u!114 &3896938975209167001
 MonoBehaviour:
@@ -66,3 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScorePoint: 0
+  localScore: 0
+  winPanel: {fileID: 0}
+  scene: {fileID: 0}
+  score: {fileID: 0}

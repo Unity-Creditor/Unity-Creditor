@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 public class EnderSCR : Manager<EnderSCR>
 {
-    public int maxScore;
+    public int maxScore = 20;
     public Image[] images;
     public int part;
     public UnityEvent end;

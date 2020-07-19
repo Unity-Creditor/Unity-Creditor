@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class NextVisiter : MonoBehaviour
+public class NextVisiter : Manager<NextVisiter>/*MonoBehaviour*/
 {
     public GameObject Visiter, Indicator, ScreenGraph;
     public Vector3 Spawn = Vector3.zero;
@@ -16,7 +16,21 @@ public class NextVisiter : MonoBehaviour
     public void Start()
     {
         NextClient(Random.Range(0, 4));
+
+        Debug.LogError("first client");
     }
+    public void StartCopy()
+    {
+        NextClient(Random.Range(0, 4));
+        Debug.LogError("first client");
+    }
+    /*public void Update()
+    {
+        if (!FindObjectOfType<VisiterAwake>())
+        {
+            NextClient(Random.Range(0, 4));
+        }
+    }*/
 
     public void NextClient(int Graph)
     {
@@ -29,14 +43,16 @@ public class NextVisiter : MonoBehaviour
         {
             ActualGraph = Graph;
             LaptopScript.Instance.ChangeGraph(ActualGraph);
+            //FindObjectOfType<LaptopScript>().ChangeGraph(ActualGraph);
         }
 
         ActualCreditHistory = Random.Range(0, 3);
         CreditHistorySCR.Instance.SetHistory(ActualCreditHistory);
+        //FindObjectOfType<CreditHistorySCR>().SetHistory(ActualCreditHistory);
 
         //Indicator = GameObject.FindWithTag("Indicator");
 
-        var CreatedVisiter = Instantiate(Visiter, Spawn, Quaternion.identity/*, transform*/);
+        var CreatedVisiter = Instantiate(Visiter, Spawn, Quaternion.identity, transform);
         //CreatedVisiter.transform.parent = gameObject.transform;
 
 
