@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaptopScript : MonoBehaviour
+public class LaptopScript : Manager<LaptopScript>
 {
     public int ActualGraph;
     public GameObject[] ScreenArts =  new GameObject[3];

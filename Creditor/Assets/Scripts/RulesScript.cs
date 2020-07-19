@@ -8,11 +8,6 @@ public class RulesScript : Manager<RulesScript>
     public int localScore;
     public TextMeshProUGUI score;
 
-    void Start()
-    {
-
-    }
-
 
     public void RightSpriteFunc()
     {
