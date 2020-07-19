@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class NextVisiter : MonoBehaviour
 {
@@ -17,30 +15,32 @@ public class NextVisiter : MonoBehaviour
 
     public void Start()
     {
-      NextClient(Random.Range(0, 2));
+        NextClient(Random.Range(0, 4));
     }
 
     public void NextClient(int Graph)
     {
-      if (Graph == 100)
-      {
-        Graph = Random.Range(0, 10);
-      }
+        if (Graph == 100)
+        {
+            Graph = Random.Range(0, 10);
+        }
 
-      if (Graph < 3)
-      {
-        ActualGraph = Graph;
-        LaptopScript.Instance.ChangeGraph(ActualGraph);
-      }
+        if (Graph < 3)
+        {
+            ActualGraph = Graph;
+            LaptopScript.Instance.ChangeGraph(ActualGraph);
+        }
 
-      Indicator = GameObject.FindWithTag("Indicator");
+        //Indicator = GameObject.FindWithTag("Indicator");
 
-      var CreatedVisiter = Instantiate(Visiter, Spawn, Quaternion.identity);
-      ActualCreditHistory = Random.Range(0, 3);
+        var CreatedVisiter = Instantiate(Visiter, Spawn, Quaternion.identity/*, transform*/);
+        //CreatedVisiter.transform.parent = gameObject.transform;
+        ActualCreditHistory = Random.Range(0, 3);
 
 
-      RulesScript.Instance.localScore = ActualCreditHistory + ActualGraph;
+        RulesScript.Instance.localScore = ActualCreditHistory + ActualGraph;
 
-      Indicator.GetComponent<SpriteRenderer> ().color = Color.Lerp(Indicator.GetComponent<SpriteRenderer> ().color, CreditHistoryColor[ActualCreditHistory], 1);
+        CreditHistorySCR.Instance.SetHistory(ActualCreditHistory);
+        //Indicator.GetComponent<SpriteRenderer> ().color = Color.Lerp(Indicator.GetComponent<SpriteRenderer> ().color, CreditHistoryColor[ActualCreditHistory], 1);
     }
 }

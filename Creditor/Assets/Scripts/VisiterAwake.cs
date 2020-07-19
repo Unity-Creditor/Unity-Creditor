@@ -13,9 +13,9 @@ public class VisiterAwake : MonoBehaviour
   void Awake()
   {
     int rand = Random.Range(0, faces.Length);
-    var face = Instantiate(faces[rand], Spawn, Quaternion.identity);
+    /*var face = */Instantiate(faces[rand], Spawn, Quaternion.identity, transform);
 
-    face.transform.parent = gameObject.transform;
+    //face.transform.parent = gameObject.transform;
     
   }
 

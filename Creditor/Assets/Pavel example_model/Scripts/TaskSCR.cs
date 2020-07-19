@@ -26,7 +26,7 @@ public class TaskSCR : Manager<TaskSCR>
         scene.SetActive(false);
         buttonImage.gameObject.SetActive(true);
         //image.gameObject.SetActive(true);
-        StartCoroutine(makeVisible());
+       // StartCoroutine(makeVisible());
     }
 
     IEnumerator makeVisible()
@@ -40,7 +40,7 @@ public class TaskSCR : Manager<TaskSCR>
 
 
         }
-        StopCoroutine(makeVisible());
+        //StopCoroutine(makeVisible());
     }
 
     public void StartMakeInvisible()
@@ -48,7 +48,7 @@ public class TaskSCR : Manager<TaskSCR>
         buttonImage.gameObject.SetActive(false);
         //image.gameObject.SetActive(false);
         scene.SetActive(true);
-        StartCoroutine(makeInvisible());
+        //StartCoroutine(makeInvisible());
     }
 
     IEnumerator makeInvisible()
@@ -62,6 +62,6 @@ public class TaskSCR : Manager<TaskSCR>
 
 
         }
-        StopCoroutine(makeInvisible());
+        //StopCoroutine(makeInvisible());
     }
 }
