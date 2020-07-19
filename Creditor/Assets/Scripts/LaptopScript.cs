@@ -13,6 +13,8 @@ public class LaptopScript : Manager<LaptopScript>
         {
           ScreenArts[i].SetActive(false);
         }
+
+        ScreenArts[0].SetActive(true);
     }
 
     public void ChangeGraph(int GraphControl)
