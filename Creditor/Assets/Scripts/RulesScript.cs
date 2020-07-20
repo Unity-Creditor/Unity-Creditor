@@ -8,21 +8,21 @@ public class RulesScript : MonoBehaviour /*Manager<RulesScript>*/
     public int localScore;
     public GameObject winPanel;
     public GameObject scene;
-    EnderSCR ender;
+    public StarsSCR stars;
     public TextMeshProUGUI score;
     public LaptopScript laptop;
     public CreditHistorySCR creditHistory;
 
     private void Awake()
     {
-        winPanel = GameObject.FindGameObjectWithTag("winPanel");
-        scene = GameObject.FindGameObjectWithTag("scene");
-        ender = FindObjectOfType<EnderSCR>();
-        laptop = FindObjectOfType<LaptopScript>();
-        creditHistory = FindObjectOfType<CreditHistorySCR>();
     }
     private void Start()
     {
+        winPanel = GameObject.FindGameObjectWithTag("winPanel");
+        scene = GameObject.FindGameObjectWithTag("scene");
+        stars = FindObjectOfType<StarsSCR>();
+        laptop = FindObjectOfType<LaptopScript>();
+        creditHistory = FindObjectOfType<CreditHistorySCR>();
         winPanel.SetActive(false);
 
     }
@@ -40,8 +40,8 @@ public class RulesScript : MonoBehaviour /*Manager<RulesScript>*/
             //Debug.Log(localScore.ActualCreditHistory);
             ScorePoint += localScore - 2;
             //score.text = ScorePoint.ToString();
-            ender.ChangeStars(ScorePoint);
-            if (ScorePoint >= ender.maxScore)
+            stars.ChangeStars(ScorePoint);
+            if (ScorePoint >= stars.maxScore)
             {
                 winPanel.SetActive(true);
                 scene.SetActive(false);

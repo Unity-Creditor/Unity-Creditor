@@ -45,21 +45,21 @@ public class NextVisiter : /*Manager<NextVisiter>*/MonoBehaviour
 
     public void NextClient(int Graph)
     {
-/*        if (Graph == 100)
-        {
-            Graph = Random.Range(0, 10);
-        }
+        /*        if (Graph == 100)
+                {
+                    Graph = Random.Range(0, 10);
+                }
 
-        if (Graph < 3)
-        {
-            ActualGraph = Graph;
-            *//*            if (LaptopScript.Instance == null)
-                        {
-                            LaptopScript.createInstance();
-                        }
-                        LaptopScript.Instance.ChangeGraph(ActualGraph);*//*
-            laptop.ChangeGraph(ActualGraph);
-        }*/
+                if (Graph < 3)
+                {
+                    ActualGraph = Graph;
+                    *//*            if (LaptopScript.Instance == null)
+                                {
+                                    LaptopScript.createInstance();
+                                }
+                                LaptopScript.Instance.ChangeGraph(ActualGraph);*//*
+                    laptop.ChangeGraph(ActualGraph);
+                }*/
 
         //ActualCreditHistory = Random.Range(0, 3);
         //creditHistory.SetHistory(ActualCreditHistory);
@@ -67,7 +67,16 @@ public class NextVisiter : /*Manager<NextVisiter>*/MonoBehaviour
         //FindObjectOfType<CreditHistorySCR>().SetHistory(ActualCreditHistory);
 
         //Indicator = GameObject.FindWithTag("Indicator");
-        newClient.Invoke();
+        //newClient.Invoke();
+
+        laptop.newGraph();
+        creditHistory.newHistory();
+        rules.SetLocalScore();
+
+        /*LaptopScript.Instance.newGraph();
+        CreditHistorySCR.Instance.newHistory();
+        RulesScript.Instance.SetLocalScore();*/
+        //rules.SetLocalScore();
         Instantiate(Visiter, Spawn, Quaternion.identity/*, transform*/);
 
         /*var CreatedVisiter = */

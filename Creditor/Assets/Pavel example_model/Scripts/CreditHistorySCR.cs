@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class CreditHistorySCR : Manager<CreditHistorySCR>
+public class CreditHistorySCR : MonoBehaviour/*Manager<CreditHistorySCR>*/
 {
     public int actualHistory;
 
@@ -9,7 +9,7 @@ public class CreditHistorySCR : Manager<CreditHistorySCR>
     public GameObject _2;
     public GameObject _3;
 
-    private void Awake()
+    private void Start()
     {
         _0.SetActive(false);
         _1.SetActive(false);
