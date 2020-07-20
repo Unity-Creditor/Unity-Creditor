@@ -19,7 +19,7 @@ namespace TMPro.Examples
         //public Material material;
 
 
-        void Start()
+        void Awake()
         {
             m_Transform = transform;
 

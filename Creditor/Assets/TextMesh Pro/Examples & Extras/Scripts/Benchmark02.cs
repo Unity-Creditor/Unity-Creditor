@@ -14,7 +14,7 @@ namespace TMPro.Examples
         private TextMeshProFloatingText floatingText_Script;
 
 
-        void Start()
+        void Awake()
         {
 
             for (int i = 0; i < NumberOfNPC; i++)

@@ -9,8 +9,10 @@ public class TaskSCR : Manager<TaskSCR>
     public float visibleSpeed;
     public GameObject scene;
     public GameObject winPanel;
+    public GameObject visiter;
     public bool isTask;
-    void Start()
+
+    void Awake()
     {
         image = GetComponent<Image>();
 /*        image.color = new Color(image.color.r, image.color.g, image.color.b, 0f);*/
@@ -23,14 +25,19 @@ public class TaskSCR : Manager<TaskSCR>
         StartCoroutine(makeVisible());
     }
 
-    public void StartMakeVisible()
+    public void AwakeMakeVisible()
     {
         scene.SetActive(false);
 
         buttonImage.gameObject.SetActive(true);
-        FindObjectOfType<VisiterAwake>().gameObject.SetActive(false);
+        if (FindObjectOfType<VisiterAwake>())
+        {
+            visiter = FindObjectOfType<VisiterAwake>().gameObject;
+            visiter.SetActive(false);
+        }
+
         //image.gameObject.SetActive(true);
-       // StartCoroutine(makeVisible());
+        // StartCoroutine(makeVisible());
     }
 
     IEnumerator makeVisible()
@@ -47,13 +54,14 @@ public class TaskSCR : Manager<TaskSCR>
         //StopCoroutine(makeVisible());
     }
 
-    public void StartMakeInvisible()
+    public void AwakeMakeInvisible()
     {
         buttonImage.gameObject.SetActive(false);
         //image.gameObject.SetActive(false);
         scene.SetActive(true);
-        //StartCoroutine(makeInvisible());
-/*        FindObjectOfType<VisiterAwake>().gameObject.SetActive(true);*/
+        visiter.SetActive(true);
+        //AwakeCoroutine(makeInvisible());
+        /*        FindObjectOfType<VisiterAwake>().gameObject.SetActive(true);*/
 
     }
 

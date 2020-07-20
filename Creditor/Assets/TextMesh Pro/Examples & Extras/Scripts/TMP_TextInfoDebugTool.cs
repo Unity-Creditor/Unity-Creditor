@@ -118,38 +118,38 @@ namespace TMPro.Examples
                 DrawRectangle(bottomLeft, topLeft, topRight, bottomRight, color);
 
                 // Baseline
-                Vector3 baselineStart = new Vector3(topLeft.x, m_Transform.TransformPoint(new Vector3(0, cInfo.baseLine, 0)).y, 0);
+                Vector3 baselineAwake = new Vector3(topLeft.x, m_Transform.TransformPoint(new Vector3(0, cInfo.baseLine, 0)).y, 0);
                 Vector3 baselineEnd = new Vector3(topRight.x, m_Transform.TransformPoint(new Vector3(0, cInfo.baseLine, 0)).y, 0);
 
                 Gizmos.color = Color.cyan;
-                Gizmos.DrawLine(baselineStart, baselineEnd);
+                Gizmos.DrawLine(baselineAwake, baselineEnd);
 
 
                 // Draw Ascender & Descender for each character.
-                Vector3 ascenderStart = new Vector3(topLeft.x, m_Transform.TransformPoint(new Vector3(0, cInfo.ascender, 0)).y, 0);
+                Vector3 ascenderAwake = new Vector3(topLeft.x, m_Transform.TransformPoint(new Vector3(0, cInfo.ascender, 0)).y, 0);
                 Vector3 ascenderEnd = new Vector3(topRight.x, m_Transform.TransformPoint(new Vector3(0, cInfo.ascender, 0)).y, 0);
-                Vector3 descenderStart = new Vector3(bottomLeft.x, m_Transform.TransformPoint(new Vector3(0, cInfo.descender, 0)).y, 0);
+                Vector3 descenderAwake = new Vector3(bottomLeft.x, m_Transform.TransformPoint(new Vector3(0, cInfo.descender, 0)).y, 0);
                 Vector3 descenderEnd = new Vector3(bottomRight.x, m_Transform.TransformPoint(new Vector3(0, cInfo.descender, 0)).y, 0);
 
                 Gizmos.color = Color.cyan;
-                Gizmos.DrawLine(ascenderStart, ascenderEnd);
-                Gizmos.DrawLine(descenderStart, descenderEnd);
+                Gizmos.DrawLine(ascenderAwake, ascenderEnd);
+                Gizmos.DrawLine(descenderAwake, descenderEnd);
 
                 // Draw Cap Height
                 float capHeight = cInfo.baseLine + cInfo.fontAsset.faceInfo.capLine * cInfo.scale;
-                Vector3 capHeightStart = new Vector3(topLeft.x, m_Transform.TransformPoint(new Vector3(0, capHeight, 0)).y, 0);
+                Vector3 capHeightAwake = new Vector3(topLeft.x, m_Transform.TransformPoint(new Vector3(0, capHeight, 0)).y, 0);
                 Vector3 capHeightEnd = new Vector3(topRight.x, m_Transform.TransformPoint(new Vector3(0, capHeight, 0)).y, 0);
 
                 Gizmos.color = Color.cyan;
-                Gizmos.DrawLine(capHeightStart, capHeightEnd);
+                Gizmos.DrawLine(capHeightAwake, capHeightEnd);
 
                 // Draw Centerline
                 float meanline = cInfo.baseLine + cInfo.fontAsset.faceInfo.meanLine * cInfo.scale;
-                Vector3 centerlineStart = new Vector3(topLeft.x, m_Transform.TransformPoint(new Vector3(0, meanline, 0)).y, 0);
+                Vector3 centerlineAwake = new Vector3(topLeft.x, m_Transform.TransformPoint(new Vector3(0, meanline, 0)).y, 0);
                 Vector3 centerlineEnd = new Vector3(topRight.x, m_Transform.TransformPoint(new Vector3(0, meanline, 0)).y, 0);
 
                 Gizmos.color = Color.cyan;
-                Gizmos.DrawLine(centerlineStart, centerlineEnd);
+                Gizmos.DrawLine(centerlineAwake, centerlineEnd);
 
                 // Draw Origin for each character.
                 float gizmoSize = (ascenderEnd.y - descenderEnd.y) * 0.02f;
@@ -168,10 +168,10 @@ namespace TMPro.Examples
                 // Draw xAdvance for each character.
                 gizmoSize = (ascenderEnd.y - descenderEnd.y) * 0.04f;
                 float xAdvance = m_Transform.TransformPoint(cInfo.xAdvance, 0, 0).x;
-                Vector3 topAdvance = new Vector3(xAdvance, baselineStart.y + gizmoSize, 0);
-                Vector3 bottomAdvance = new Vector3(xAdvance, baselineStart.y - gizmoSize, 0);
-                Vector3 leftAdvance = new Vector3(xAdvance - gizmoSize, baselineStart.y, 0);
-                Vector3 rightAdvance = new Vector3(xAdvance + gizmoSize, baselineStart.y, 0);
+                Vector3 topAdvance = new Vector3(xAdvance, baselineAwake.y + gizmoSize, 0);
+                Vector3 bottomAdvance = new Vector3(xAdvance, baselineAwake.y - gizmoSize, 0);
+                Vector3 leftAdvance = new Vector3(xAdvance - gizmoSize, baselineAwake.y, 0);
+                Vector3 rightAdvance = new Vector3(xAdvance + gizmoSize, baselineAwake.y, 0);
 
                 Gizmos.color = Color.green;
                 Gizmos.DrawLine(topAdvance, bottomAdvance);
@@ -226,7 +226,7 @@ namespace TMPro.Examples
                         bottomLeft = new Vector3(currentCharInfo.bottomLeft.x, currentCharInfo.descender, 0);
                         topLeft = new Vector3(currentCharInfo.bottomLeft.x, currentCharInfo.ascender, 0);
 
-                        //Debug.Log("Start Word Region at [" + currentCharInfo.character + "]");
+                        //Debug.Log("Awake Word Region at [" + currentCharInfo.character + "]");
 
                         // If Word is one character
                         if (wInfo.characterCount == 1)
@@ -332,7 +332,7 @@ namespace TMPro.Examples
                         bottomLeft = new Vector3(currentCharInfo.bottomLeft.x, currentCharInfo.descender, 0);
                         topLeft = new Vector3(currentCharInfo.bottomLeft.x, currentCharInfo.ascender, 0);
 
-                        //Debug.Log("Start Word Region at [" + currentCharInfo.character + "]");
+                        //Debug.Log("Awake Word Region at [" + currentCharInfo.character + "]");
 
                         // If Link is one character
                         if (linkInfo.linkTextLength == 1)
@@ -429,11 +429,11 @@ namespace TMPro.Examples
 
                 DrawDottedRectangle(bottomOrigin, topOrigin, topAdvance, bottomAdvance, Color.green);
 
-                Vector3 baselineStart = m_Transform.TransformPoint(new Vector3(textInfo.characterInfo[lineInfo.firstCharacterIndex].bottomLeft.x, baseline, 0));
+                Vector3 baselineAwake = m_Transform.TransformPoint(new Vector3(textInfo.characterInfo[lineInfo.firstCharacterIndex].bottomLeft.x, baseline, 0));
                 Vector3 baselineEnd = m_Transform.TransformPoint(new Vector3(textInfo.characterInfo[lineInfo.lastCharacterIndex].topRight.x, baseline, 0));
 
                 Gizmos.color = Color.cyan;
-                Gizmos.DrawLine(baselineStart, baselineEnd);
+                Gizmos.DrawLine(baselineAwake, baselineEnd);
 
                 // Draw LineExtents
                 Gizmos.color = Color.grey;
@@ -452,11 +452,11 @@ namespace TMPro.Examples
 
                 //DrawRectangle(bottomLeft, topLeft, topRight, bottomRight, Color.green);
 
-                //Vector3 baselineStart = m_Transform.TransformPoint(new Vector3(textInfo.characterInfo[lineInfo.firstVisibleCharacterIndex].bottomLeft.x, textInfo.characterInfo[lineInfo.firstVisibleCharacterIndex].baseLine, 0));
+                //Vector3 baselineAwake = m_Transform.TransformPoint(new Vector3(textInfo.characterInfo[lineInfo.firstVisibleCharacterIndex].bottomLeft.x, textInfo.characterInfo[lineInfo.firstVisibleCharacterIndex].baseLine, 0));
                 //Vector3 baselineEnd = m_Transform.TransformPoint(new Vector3(textInfo.characterInfo[lineInfo.lastVisibleCharacterIndex].topRight.x, textInfo.characterInfo[lineInfo.lastVisibleCharacterIndex].baseLine, 0));
 
                 //Gizmos.color = Color.cyan;
-                //Gizmos.DrawLine(baselineStart, baselineEnd);
+                //Gizmos.DrawLine(baselineAwake, baselineEnd);
                 //}
             }
         }

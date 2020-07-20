@@ -10,13 +10,13 @@ public class RulesScript : Manager<RulesScript>
     public GameObject scene;
     public TextMeshProUGUI score;
 
-    private void Start()
+    private void Awake()
     {
         EnderSCR.Instance.ChangeStars(ScorePoint);
         winPanel.SetActive(false);
         Debug.LogError("rule client");
     }
-    /*public void StartCopy()
+    /*public void AwakeCopy()
     {
         EnderSCR.Instance.ChangeStars(ScorePoint);
         winPanel.SetActive(false);

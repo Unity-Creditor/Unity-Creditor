@@ -19,7 +19,7 @@ public class NextVisiter : Manager<NextVisiter>/*MonoBehaviour*/
 
         Debug.LogError("first client");
     }
-    public void StartCopy()
+    public void AwakeCopy()
     {
         NextClient(Random.Range(0, 4));
         Debug.LogError("first client");

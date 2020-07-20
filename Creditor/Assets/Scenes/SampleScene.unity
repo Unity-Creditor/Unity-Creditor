@@ -717,7 +717,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1880060300}
-        m_MethodName: StartMakeInvisible
+        m_MethodName: AwakeMakeInvisible
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1598,7 +1598,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1880060300}
-        m_MethodName: StartMakeVisible
+        m_MethodName: AwakeMakeVisible
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3048,6 +3048,7 @@ MonoBehaviour:
   visibleSpeed: 4
   scene: {fileID: 1939575536}
   winPanel: {fileID: 1549068816}
+  visiter: {fileID: 0}
   isTask: 0
 --- !u!114 &1880060301
 MonoBehaviour:
@@ -3473,7 +3474,7 @@ MonoBehaviour:
   - {fileID: 1422570243}
   - {fileID: 1625579633}
   - {fileID: 371099591}
-  part: 0
+  part: 4
   end:
     m_PersistentCalls:
       m_Calls: []

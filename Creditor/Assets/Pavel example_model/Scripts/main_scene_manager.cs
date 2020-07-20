@@ -32,7 +32,7 @@ public class main_scene_manager : MonoBehaviour
     public Vector2 backgroundPlace;
 
     //public GameObject[] mouth;
-    void Start()
+    void Awake()
     {
         Instantiate(faces[Random.Range(0,faces.Length)], new Vector2(transform.position.x+facePlace.x,transform.position.y+facePlace.y),transform.rotation,transform)
             .GetComponent<SpriteRenderer>().sortingOrder = 10;

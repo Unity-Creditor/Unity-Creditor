@@ -7,7 +7,7 @@ public class CounterSCR : MonoBehaviour
 {
     public string nameOfTheDlta;
     
-    void Start()
+    void Awake()
     {
         PlayerPrefs.SetInt(name,0);
         GetComponentInChildren<TextMeshProUGUI>().text = PlayerPrefs.GetInt(nameOfTheDlta).ToString();

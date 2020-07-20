@@ -102,20 +102,20 @@ namespace TMPro.Examples
         public IEnumerator DisplayTextMeshProFloatingText()
         {
             float CountDuration = 2.0f; // How long is the countdown alive.    
-            float starting_Count = Random.Range(5f, 20f); // At what number is the counter starting at.
-            float current_Count = starting_Count;
+            float Awakeing_Count = Random.Range(5f, 20f); // At what number is the counter Awakeing at.
+            float current_Count = Awakeing_Count;
 
-            Vector3 start_pos = m_floatingText_Transform.position;
-            Color32 start_color = m_textMeshPro.color;
+            Vector3 Awake_pos = m_floatingText_Transform.position;
+            Color32 Awake_color = m_textMeshPro.color;
             float alpha = 255;
             int int_counter = 0;
 
 
-            float fadeDuration = 3 / starting_Count * CountDuration;
+            float fadeDuration = 3 / Awakeing_Count * CountDuration;
 
             while (current_Count > 0)
             {
-                current_Count -= (Time.deltaTime / CountDuration) * starting_Count;
+                current_Count -= (Time.deltaTime / CountDuration) * Awakeing_Count;
 
                 if (current_Count <= 3)
                 {
@@ -127,10 +127,10 @@ namespace TMPro.Examples
                 m_textMeshPro.text = int_counter.ToString();
                 //m_textMeshPro.SetText("{0}", (int)current_Count);
 
-                m_textMeshPro.color = new Color32(start_color.r, start_color.g, start_color.b, (byte)alpha);
+                m_textMeshPro.color = new Color32(Awake_color.r, Awake_color.g, Awake_color.b, (byte)alpha);
 
                 // Move the floating text upward each update
-                m_floatingText_Transform.position += new Vector3(0, starting_Count * Time.deltaTime, 0);
+                m_floatingText_Transform.position += new Vector3(0, Awakeing_Count * Time.deltaTime, 0);
 
                 // Align floating text perpendicular to Camera.
                 if (!lastPOS.Compare(m_cameraTransform.position, 1000) || !lastRotation.Compare(m_cameraTransform.rotation, 1000))
@@ -149,7 +149,7 @@ namespace TMPro.Examples
 
             yield return new WaitForSeconds(Random.Range(0.1f, 1.0f));
 
-            m_floatingText_Transform.position = start_pos;
+            m_floatingText_Transform.position = Awake_pos;
 
             StartCoroutine(DisplayTextMeshProFloatingText());
         }
@@ -158,19 +158,19 @@ namespace TMPro.Examples
         public IEnumerator DisplayTextMeshFloatingText()
         {
             float CountDuration = 2.0f; // How long is the countdown alive.    
-            float starting_Count = Random.Range(5f, 20f); // At what number is the counter starting at.
-            float current_Count = starting_Count;
+            float Awakeing_Count = Random.Range(5f, 20f); // At what number is the counter Awakeing at.
+            float current_Count = Awakeing_Count;
 
-            Vector3 start_pos = m_floatingText_Transform.position;
-            Color32 start_color = m_textMesh.color;
+            Vector3 Awake_pos = m_floatingText_Transform.position;
+            Color32 Awake_color = m_textMesh.color;
             float alpha = 255;
             int int_counter = 0;
 
-            float fadeDuration = 3 / starting_Count * CountDuration;
+            float fadeDuration = 3 / Awakeing_Count * CountDuration;
 
             while (current_Count > 0)
             {
-                current_Count -= (Time.deltaTime / CountDuration) * starting_Count;
+                current_Count -= (Time.deltaTime / CountDuration) * Awakeing_Count;
 
                 if (current_Count <= 3)
                 {
@@ -182,10 +182,10 @@ namespace TMPro.Examples
                 m_textMesh.text = int_counter.ToString();
                 //Debug.Log("Current Count:" + current_Count.ToString("f2"));
 
-                m_textMesh.color = new Color32(start_color.r, start_color.g, start_color.b, (byte)alpha);
+                m_textMesh.color = new Color32(Awake_color.r, Awake_color.g, Awake_color.b, (byte)alpha);
 
                 // Move the floating text upward each update
-                m_floatingText_Transform.position += new Vector3(0, starting_Count * Time.deltaTime, 0);
+                m_floatingText_Transform.position += new Vector3(0, Awakeing_Count * Time.deltaTime, 0);
 
                 // Align floating text perpendicular to Camera.
                 if (!lastPOS.Compare(m_cameraTransform.position, 1000) || !lastRotation.Compare(m_cameraTransform.rotation, 1000))
@@ -206,7 +206,7 @@ namespace TMPro.Examples
 
             yield return new WaitForSeconds(Random.Range(0.1f, 1.0f));
 
-            m_floatingText_Transform.position = start_pos;
+            m_floatingText_Transform.position = Awake_pos;
 
             StartCoroutine(DisplayTextMeshFloatingText());
         }

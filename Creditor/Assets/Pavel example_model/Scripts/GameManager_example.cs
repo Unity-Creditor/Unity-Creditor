@@ -8,8 +8,8 @@ public class GameManager_example : MonoBehaviour
 /*    public GameObject computer;*/
     public GameObject store;
     public GameObject[] environment;
-    public GameObject startButton;
-    private void Start()
+    public GameObject AwakeButton;
+    private void Awake()
     {
         label.SetActive(true);
 /*        computer.SetActive(true);*/
@@ -18,12 +18,12 @@ public class GameManager_example : MonoBehaviour
         {
             smth.SetActive(false);
         }
-        startButton.SetActive(true);
+        AwakeButton.SetActive(true);
     }
-    public void StartTheGame()
+    public void AwakeTheGame()
     {
         label.SetActive(false);
-        startButton.SetActive(false);
+        AwakeButton.SetActive(false);
         /*        computer.SetActive(true);*/
         //store.SetActive(true); его пока нет
         foreach (GameObject smth in environment)

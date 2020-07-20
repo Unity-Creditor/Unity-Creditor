@@ -9,7 +9,7 @@ public class CreditHistorySCR : Manager<CreditHistorySCR>
     public GameObject _2;
     public GameObject _3;
 
-    private void Start()
+    private void Awake()
     {
         _0.SetActive(false);
         _1.SetActive(false);

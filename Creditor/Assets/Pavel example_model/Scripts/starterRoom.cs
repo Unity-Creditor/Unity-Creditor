@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class starterRoom : MonoBehaviour
+public class AwakeerRoom : MonoBehaviour
 {
     /*void Awake()
     {
-        NextVisiter.Instance.StartCopy();
-        RulesScript.Instance.StartCopy();
+        NextVisiter.Instance.AwakeCopy();
+        RulesScript.Instance.AwakeCopy();
     }*/
 
 }
