@@ -8,7 +8,7 @@ public class EnderSCR : Manager<EnderSCR>
     public int part;
     public UnityEvent end;
 
-    void Start()
+    void Awake()
     {
         ImageDisabler();
         part = maxScore / images.Length;

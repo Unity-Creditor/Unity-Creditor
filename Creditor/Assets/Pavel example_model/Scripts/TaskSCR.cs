@@ -4,12 +4,13 @@ using UnityEngine.UI;
 
 public class TaskSCR : Manager<TaskSCR>
 {
-    Image image;
+    public Image image;
     public Image buttonImage;
     public float visibleSpeed;
     public GameObject scene;
     public bool isTask;
-    void Start()
+    GameObject visiter;
+    void Awake()
     {
         image = GetComponent<Image>();
         image.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
@@ -18,7 +19,7 @@ public class TaskSCR : Manager<TaskSCR>
         buttonImage.color = new Color(buttonImage.color.r, buttonImage.color.g, buttonImage.color.b, 0f);
 
         scene.SetActive(false);
-
+        Debug.LogWarning("I ended");
         StartCoroutine(makeVisible());
     }
 
@@ -27,7 +28,12 @@ public class TaskSCR : Manager<TaskSCR>
         scene.SetActive(false);
 
         buttonImage.gameObject.SetActive(true);
-        FindObjectOfType<VisiterAwake>().gameObject.SetActive(false);
+        if (FindObjectOfType<VisiterAwake>())
+        {
+            visiter = FindObjectOfType<VisiterAwake>().gameObject;
+            visiter.SetActive(false);
+        }
+        /*FindObjectOfType<VisiterAwake>().gameObject.SetActive(false);*/
         //image.gameObject.SetActive(true);
        // StartCoroutine(makeVisible());
     }
@@ -51,8 +57,9 @@ public class TaskSCR : Manager<TaskSCR>
         buttonImage.gameObject.SetActive(false);
         //image.gameObject.SetActive(false);
         scene.SetActive(true);
+        visiter.SetActive(true);
         //StartCoroutine(makeInvisible());
-/*        FindObjectOfType<VisiterAwake>().gameObject.SetActive(true);*/
+        /*        FindObjectOfType<VisiterAwake>().gameObject.SetActive(true);*/
 
     }
 
