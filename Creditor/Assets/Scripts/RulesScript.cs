@@ -1,20 +1,27 @@
 ﻿using TMPro;
 using UnityEngine;
 
-public class RulesScript : Manager<RulesScript>
+public class RulesScript : MonoBehaviour /*Manager<RulesScript>*/
 {
     public int ScorePoint = 0;
     bool RightSwipe = true;
     public int localScore;
     public GameObject winPanel;
     public GameObject scene;
+    EnderSCR ender;
     public TextMeshProUGUI score;
 
     private void Awake()
     {
-        EnderSCR.Instance.ChangeStars(ScorePoint);
+        winPanel = GameObject.FindGameObjectWithTag("winPanel");
+        scene = GameObject.FindGameObjectWithTag("scene");
+
+    }
+    private void Start()
+    {
         winPanel.SetActive(false);
-        Debug.LogError("rule client");
+        ender = FindObjectOfType<EnderSCR>();
+
     }
     /*public void AwakeCopy()
     {
@@ -29,9 +36,9 @@ public class RulesScript : Manager<RulesScript>
             Debug.Log(localScore);
             //Debug.Log(localScore.ActualCreditHistory);
             ScorePoint += localScore - 2;
-            score.text = ScorePoint.ToString();
-            EnderSCR.Instance.ChangeStars(ScorePoint);
-            if (ScorePoint>=EnderSCR.Instance.maxScore)
+            //score.text = ScorePoint.ToString();
+            ender.ChangeStars(ScorePoint);
+            if (ScorePoint >= ender.maxScore)
             {
                 winPanel.SetActive(true);
                 scene.SetActive(false);

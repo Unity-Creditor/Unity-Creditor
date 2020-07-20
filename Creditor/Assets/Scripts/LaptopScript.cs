@@ -1,22 +1,19 @@
 ﻿using UnityEngine;
 
-public class LaptopScript : Manager<LaptopScript>
+public class LaptopScript : MonoBehaviour/*Manager<LaptopScript>*/
 {
     public int ActualGraph;
     public GameObject[] ScreenArts = new GameObject[3];
 
-    void Awake()
+/*    static public void createInstance()
     {
-        /*        for (int i = 0; i != ScreenArts.Length; ++i)
-                {
-                    ScreenArts[i].SetActive(false);
-                }
-
-                ScreenArts[0].SetActive(true);*/
+        m_Instance = new LaptopScript();
+    }*/
+    void Start()
+    {
         ScreenArts[0].SetActive(false);
         ScreenArts[1].SetActive(false);
         ScreenArts[2].SetActive(false);
-
     }
 
     public void ChangeGraph(int GraphControl)

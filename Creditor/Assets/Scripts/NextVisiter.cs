@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class NextVisiter : Manager<NextVisiter>/*MonoBehaviour*/
+public class NextVisiter : /*Manager<NextVisiter>*/MonoBehaviour
 {
     public GameObject Visiter, Indicator, ScreenGraph;
     public Vector3 Spawn = Vector3.zero;
@@ -10,20 +10,28 @@ public class NextVisiter : Manager<NextVisiter>/*MonoBehaviour*/
     public int Graph;
     public int ActualGraph;
     public int ActualCreditHistory;
-
+    LaptopScript laptop;
+    CreditHistorySCR creditHistory;
+    RulesScript rules;
     //private LaptopScript;
 
+    private void Awake()
+    {
+        laptop = FindObjectOfType<LaptopScript>();
+        creditHistory = FindObjectOfType<CreditHistorySCR>();
+        rules = FindObjectOfType<RulesScript>();
+    }
     public void Start()
     {
         NextClient(Random.Range(0, 4));
 
         Debug.LogError("first client");
     }
-    public void AwakeCopy()
+/*    public void AwakeCopy()
     {
         NextClient(Random.Range(0, 4));
         Debug.LogError("first client");
-    }
+    }*/
     /*public void Update()
     {
         if (!FindObjectOfType<VisiterAwake>())
@@ -42,21 +50,26 @@ public class NextVisiter : Manager<NextVisiter>/*MonoBehaviour*/
         if (Graph < 3)
         {
             ActualGraph = Graph;
-            LaptopScript.Instance.ChangeGraph(ActualGraph);
-            //FindObjectOfType<LaptopScript>().ChangeGraph(ActualGraph);
+            /*            if (LaptopScript.Instance == null)
+                        {
+                            LaptopScript.createInstance();
+                        }
+                        LaptopScript.Instance.ChangeGraph(ActualGraph);*/
+            laptop.ChangeGraph(ActualGraph);
         }
 
         ActualCreditHistory = Random.Range(0, 3);
-        CreditHistorySCR.Instance.SetHistory(ActualCreditHistory);
+        creditHistory.SetHistory(ActualCreditHistory);
+        //CreditHistorySCR.Instance.SetHistory(ActualCreditHistory);
         //FindObjectOfType<CreditHistorySCR>().SetHistory(ActualCreditHistory);
 
         //Indicator = GameObject.FindWithTag("Indicator");
 
-        var CreatedVisiter = Instantiate(Visiter, Spawn, Quaternion.identity, transform);
+        /*var CreatedVisiter = */Instantiate(Visiter, Spawn, Quaternion.identity/*, transform*/);
         //CreatedVisiter.transform.parent = gameObject.transform;
 
-
-        RulesScript.Instance.localScore = ActualCreditHistory + ActualGraph;
+        rules.localScore = ActualCreditHistory + ActualGraph;
+        //RulesScript.Instance.localScore = ActualCreditHistory + ActualGraph;
 
 
         //Indicator.GetComponent<SpriteRenderer> ().color = Color.Lerp(Indicator.GetComponent<SpriteRenderer> ().color, CreditHistoryColor[ActualCreditHistory], 1);

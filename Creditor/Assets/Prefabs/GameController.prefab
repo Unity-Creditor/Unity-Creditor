@@ -50,12 +50,12 @@ MonoBehaviour:
   Spawn: {x: 0, y: 0, z: 0}
   actualPosition: {x: 0, y: 0.2, z: 0}
   CreditHistoryColor:
-  - {r: 0.745283, g: 0.25663045, b: 0.26671898, a: 1}
-  - {r: 1, g: 0.6916563, b: 0.28773582, a: 1}
+  - {r: 0.74509805, g: 0.25490198, b: 0.26666668, a: 1}
+  - {r: 0.9528302, g: 0.83194613, b: 0.46293166, a: 1}
   - {r: 0.03137255, g: 0.6784314, b: 0, a: 1}
   Graph: 100
-  ActualGraph: 0
-  ActualCreditHistory: 0
+  ActualGraph: 1
+  ActualCreditHistory: 2
 --- !u!114 &3896938975209167001
 MonoBehaviour:
   m_ObjectHideFlags: 0

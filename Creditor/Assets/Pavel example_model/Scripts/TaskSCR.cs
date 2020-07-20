@@ -15,13 +15,15 @@ public class TaskSCR : Manager<TaskSCR>
     void Awake()
     {
         image = GetComponent<Image>();
-/*        image.color = new Color(image.color.r, image.color.g, image.color.b, 0f);*/
+        /*        image.color = new Color(image.color.r, image.color.g, image.color.b, 0f);*/
         isTask = true;
         buttonImage = GetComponentInChildren<Image>();
         buttonImage.color = new Color(buttonImage.color.r, buttonImage.color.g, buttonImage.color.b, 0f);
+    }
+    private void Start()
+    {
         winPanel.SetActive(false);
         scene.SetActive(false);
-
         StartCoroutine(makeVisible());
     }
 
@@ -43,7 +45,7 @@ public class TaskSCR : Manager<TaskSCR>
     IEnumerator makeVisible()
     {
 
-        while (image.color.a<=1f)
+        while (image.color.a <= 1f)
         {
             image.color += new Color(0, 0, 0, visibleSpeed * Time.deltaTime);
             buttonImage.color += new Color(0, 0, 0, visibleSpeed * Time.deltaTime);
@@ -59,7 +61,7 @@ public class TaskSCR : Manager<TaskSCR>
         buttonImage.gameObject.SetActive(false);
         //image.gameObject.SetActive(false);
         scene.SetActive(true);
-        visiter.SetActive(true);
+        //visiter.SetActive(true);
         //AwakeCoroutine(makeInvisible());
         /*        FindObjectOfType<VisiterAwake>().gameObject.SetActive(true);*/
 

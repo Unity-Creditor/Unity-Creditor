@@ -1,7 +1,8 @@
 ﻿using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine;
 
-public class EnderSCR : Manager<EnderSCR>
+public class EnderSCR : MonoBehaviour /*Manager<EnderSCR>*/
 {
     public int maxScore = 20;
     public Image[] images;
