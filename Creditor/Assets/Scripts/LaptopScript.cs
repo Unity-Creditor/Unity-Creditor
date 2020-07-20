@@ -7,22 +7,19 @@ public class LaptopScript : Manager<LaptopScript>
 
     void Start()
     {
-        /*        for (int i = 0; i != ScreenArts.Length; ++i)
-                {
-                    ScreenArts[i].SetActive(false);
-                }
+        for (int i = 0; i != ScreenArts.Length; ++i)
+        {
+            ScreenArts[i].SetActive(false);
+        }
 
-                ScreenArts[0].SetActive(true);*/
-        ScreenArts[0].SetActive(false);
-        ScreenArts[1].SetActive(false);
-        ScreenArts[2].SetActive(false);
+        ScreenArts[0].SetActive(true);
 
     }
 
     public void ChangeGraph(int GraphControl)
     {
-        ActualGraph = GraphControl;
-        /*Debug.Log("Graph changed");*/
+        /*ActualGraph = GraphControl;
+        Debug.Log("Graph changed");
         if (GraphControl == 0)
         {
             ScreenArts[0].SetActive(true);
@@ -43,19 +40,19 @@ public class LaptopScript : Manager<LaptopScript>
             ScreenArts[1].SetActive(false);
             ScreenArts[2].SetActive(true);
             Debug.Log("Graph changed 2");
-        }
+        }*/
 /*        if (GraphControl == 3)
         {
             ScreenArts[0].SetActive(true);
             ScreenArts[1].SetActive(false);
             ScreenArts[2].SetActive(false);
         }*/
-        /*      if (GraphControl != ActualGraph)
-              {
-                ScreenArts[ActualGraph].SetActive(false);
-                ActualGraph = GraphControl;
-                ScreenArts[GraphControl].SetActive(true);
-              }*/
+         if (GraphControl != ActualGraph)
+        {
+          ScreenArts[ActualGraph].SetActive(false);
+          ActualGraph = GraphControl;
+          ScreenArts[GraphControl].SetActive(true);
+        }
 
     }
 }
