@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TaskSCR : Manager<TaskSCR>
+public class TaskSCR : MonoBehaviour /*Manager<TaskSCR>*/
 {
     Image image;
     public Image buttonImage;

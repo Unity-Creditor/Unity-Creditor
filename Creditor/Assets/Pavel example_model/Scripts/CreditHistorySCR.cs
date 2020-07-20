@@ -49,4 +49,9 @@ public class CreditHistorySCR : Manager<CreditHistorySCR>
             _3.SetActive(true);
         }
     }
+    public void newHistory()
+    {
+        actualHistory = Random.Range(0, 3);
+        SetHistory(actualHistory);
+    }
 }

@@ -8,6 +8,14 @@ public class SwipeScript : MonoBehaviour
     public UnityEvent SwipeYes = new UnityEvent();
     public int Score = 0;
     bool MouseDown = false;
+    RulesScript rules;
+    TaskSCR task;
+
+    public void Start()
+    {
+        rules = FindObjectOfType<RulesScript>();
+        task = FindObjectOfType<TaskSCR>();
+    }
 
     public void OnMouseDown()
     {
@@ -20,7 +28,7 @@ public class SwipeScript : MonoBehaviour
         if (transform.position.x >= 1.25f)
         {
             //GameObject.FindWithTag("GameController").GetComponent<RulesScript>().RightSpriteFunc();
-            RulesScript.Instance.RightSpriteFunc();
+            rules.RightSpriteFunc();
             //FindObjectOfType<RulesScript>().RightSpriteFunc();
 
             Debug.Log("Yes");
@@ -43,7 +51,7 @@ public class SwipeScript : MonoBehaviour
 
     public void Update()
     {
-        if (MouseDown && /*!FindObjectOfType<TaskSCR>()*/ /*&& !FindObjectOfType<TaskSCR>().isTask*/TaskSCR.Instance.isTask)
+        if (MouseDown/*!FindObjectOfType<TaskSCR>()*/ /*&& !FindObjectOfType<TaskSCR>().isTask*//*task.isTask*/)
         {
             Vector3 actualPosition = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, transform.position.y, 0);
             transform.position = actualPosition;

@@ -120,3 +120,4 @@ MonoBehaviour:
   - {fileID: 2350297534053388759, guid: 3166190413495254a97e30680de154ec, type: 3}
   - {fileID: 8507980137252276012, guid: 8140ef1ca6aeb27489e33f61d8235e36, type: 3}
   - {fileID: 7477005705412488926, guid: 9dd768d999fb20445bf2e57529505d6f, type: 3}
+  spriteRenderer: {fileID: 0}

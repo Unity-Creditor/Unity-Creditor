@@ -10,17 +10,20 @@ public class RulesScript : MonoBehaviour /*Manager<RulesScript>*/
     public GameObject scene;
     EnderSCR ender;
     public TextMeshProUGUI score;
+    public LaptopScript laptop;
+    public CreditHistorySCR creditHistory;
 
     private void Awake()
     {
         winPanel = GameObject.FindGameObjectWithTag("winPanel");
         scene = GameObject.FindGameObjectWithTag("scene");
-
+        ender = FindObjectOfType<EnderSCR>();
+        laptop = FindObjectOfType<LaptopScript>();
+        creditHistory = FindObjectOfType<CreditHistorySCR>();
     }
     private void Start()
     {
         winPanel.SetActive(false);
-        ender = FindObjectOfType<EnderSCR>();
 
     }
     /*public void AwakeCopy()
@@ -44,5 +47,9 @@ public class RulesScript : MonoBehaviour /*Manager<RulesScript>*/
                 scene.SetActive(false);
             }
         }
+    }
+    public void SetLocalScore()
+    {
+        localScore = laptop.actualGraph + creditHistory.actualHistory;
     }
 }

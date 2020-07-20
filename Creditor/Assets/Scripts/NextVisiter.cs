@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class NextVisiter : /*Manager<NextVisiter>*/MonoBehaviour
 {
-    public GameObject Visiter, Indicator, ScreenGraph;
+    public GameObject Visiter/*, Indicator, ScreenGraph*/;
     public Vector3 Spawn = Vector3.zero;
     public Vector3 actualPosition = new Vector3(0, 0.2f, 0);
     public Color[] CreditHistoryColor = new Color[3];
@@ -10,19 +11,21 @@ public class NextVisiter : /*Manager<NextVisiter>*/MonoBehaviour
     public int Graph;
     public int ActualGraph;
     public int ActualCreditHistory;
-    LaptopScript laptop;
-    CreditHistorySCR creditHistory;
-    RulesScript rules;
+    public LaptopScript laptop;
+    public CreditHistorySCR creditHistory;
+    public RulesScript rules;
     //private LaptopScript;
+    public UnityEvent newClient;
 
     private void Awake()
+    {
+
+    }
+    public void Start()
     {
         laptop = FindObjectOfType<LaptopScript>();
         creditHistory = FindObjectOfType<CreditHistorySCR>();
         rules = FindObjectOfType<RulesScript>();
-    }
-    public void Start()
-    {
         NextClient(Random.Range(0, 4));
 
         Debug.LogError("first client");
@@ -42,7 +45,7 @@ public class NextVisiter : /*Manager<NextVisiter>*/MonoBehaviour
 
     public void NextClient(int Graph)
     {
-        if (Graph == 100)
+/*        if (Graph == 100)
         {
             Graph = Random.Range(0, 10);
         }
@@ -50,25 +53,27 @@ public class NextVisiter : /*Manager<NextVisiter>*/MonoBehaviour
         if (Graph < 3)
         {
             ActualGraph = Graph;
-            /*            if (LaptopScript.Instance == null)
+            *//*            if (LaptopScript.Instance == null)
                         {
                             LaptopScript.createInstance();
                         }
-                        LaptopScript.Instance.ChangeGraph(ActualGraph);*/
+                        LaptopScript.Instance.ChangeGraph(ActualGraph);*//*
             laptop.ChangeGraph(ActualGraph);
-        }
+        }*/
 
-        ActualCreditHistory = Random.Range(0, 3);
-        creditHistory.SetHistory(ActualCreditHistory);
+        //ActualCreditHistory = Random.Range(0, 3);
+        //creditHistory.SetHistory(ActualCreditHistory);
         //CreditHistorySCR.Instance.SetHistory(ActualCreditHistory);
         //FindObjectOfType<CreditHistorySCR>().SetHistory(ActualCreditHistory);
 
         //Indicator = GameObject.FindWithTag("Indicator");
+        newClient.Invoke();
+        Instantiate(Visiter, Spawn, Quaternion.identity/*, transform*/);
 
-        /*var CreatedVisiter = */Instantiate(Visiter, Spawn, Quaternion.identity/*, transform*/);
+        /*var CreatedVisiter = */
         //CreatedVisiter.transform.parent = gameObject.transform;
 
-        rules.localScore = ActualCreditHistory + ActualGraph;
+        //rules.localScore = ActualCreditHistory + ActualGraph;
         //RulesScript.Instance.localScore = ActualCreditHistory + ActualGraph;
 
 

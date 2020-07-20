@@ -2,7 +2,7 @@
 
 public class LaptopScript : MonoBehaviour/*Manager<LaptopScript>*/
 {
-    public int ActualGraph;
+    public int actualGraph;
     public GameObject[] ScreenArts = new GameObject[3];
 
 /*    static public void createInstance()
@@ -18,7 +18,7 @@ public class LaptopScript : MonoBehaviour/*Manager<LaptopScript>*/
 
     public void ChangeGraph(int GraphControl)
     {
-        ActualGraph = GraphControl;
+        actualGraph = GraphControl;
         /*Debug.Log("Graph changed");*/
         if (GraphControl == 0)
         {
@@ -54,5 +54,19 @@ public class LaptopScript : MonoBehaviour/*Manager<LaptopScript>*/
                 ScreenArts[GraphControl].SetActive(true);
               }*/
 
+    }
+    public void newGraph()
+    {
+        int graph = Random.Range(0,10);
+        if (graph < 3)
+        {
+            actualGraph = graph;
+            /*            if (LaptopScript.Instance == null)
+                        {
+                            LaptopScript.createInstance();
+                        }
+                        LaptopScript.Instance.ChangeGraph(ActualGraph);*/
+            ChangeGraph(actualGraph);
+        }
     }
 }
