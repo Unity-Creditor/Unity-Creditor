@@ -5,8 +5,11 @@ using UnityEngine;
 public class SetSmbSet : MonoBehaviour
 {
     public string name;
+    public bool isBuyed = false;
+    public GameObject chice;
     public void ChoseSet(int value)
     {
-        PlayerPrefs.SetInt(name, value);
+        if(isBuyed) PlayerPrefs.SetInt(name, value);
+        //else choice
     }
 }
