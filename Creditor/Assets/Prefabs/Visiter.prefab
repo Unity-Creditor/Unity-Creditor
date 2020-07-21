@@ -74,7 +74,7 @@ MonoBehaviour:
   OnSwipe:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3015293933697112469, guid: 089d9ba6898794b45b1cee7645204482,
+      - m_Target: {fileID: 2113957103056546515, guid: 0492b2cf7a317b843b6a111971f6dfdb,
           type: 3}
         m_MethodName: NextClient
         m_Mode: 3
@@ -89,7 +89,7 @@ MonoBehaviour:
   SwipeYes:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3896938975209167001, guid: 089d9ba6898794b45b1cee7645204482,
+      - m_Target: {fileID: 2113957103056546524, guid: 0492b2cf7a317b843b6a111971f6dfdb,
           type: 3}
         m_MethodName: RightSpriteFunc
         m_Mode: 1

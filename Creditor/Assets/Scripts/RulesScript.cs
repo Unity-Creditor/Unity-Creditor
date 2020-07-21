@@ -12,6 +12,7 @@ public class RulesScript : MonoBehaviour /*Manager<RulesScript>*/
     public TextMeshProUGUI score;
     public LaptopScript laptop;
     public CreditHistorySCR creditHistory;
+    public bool isEnd = false;
 
     private void Awake()
     {
@@ -44,7 +45,9 @@ public class RulesScript : MonoBehaviour /*Manager<RulesScript>*/
             if (ScorePoint >= stars.maxScore)
             {
                 winPanel.SetActive(true);
-                scene.SetActive(false);
+                //GameObject.FindGameObjectWithTag("scene").SetActive(false);
+                FindObjectOfType<VisiterAwake>().gameObject.SetActive(false);
+                isEnd = true;
             }
         }
     }

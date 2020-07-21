@@ -51,7 +51,7 @@ public class SwipeScript : MonoBehaviour
 
     public void Update()
     {
-        if (MouseDown/*!FindObjectOfType<TaskSCR>()*/ /*&& !FindObjectOfType<TaskSCR>().isTask*//*task.isTask*/)
+        if (MouseDown && !FindObjectOfType<RulesScript>().isEnd/*!FindObjectOfType<TaskSCR>()*/ /*&& !FindObjectOfType<TaskSCR>().isTask*//*task.isTask*/)
         {
             Vector3 actualPosition = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, transform.position.y, 0);
             transform.position = actualPosition;

@@ -69,9 +69,9 @@ public class NextVisiter : /*Manager<NextVisiter>*/MonoBehaviour
         //Indicator = GameObject.FindWithTag("Indicator");
         //newClient.Invoke();
 
-        laptop.newGraph();
-        creditHistory.newHistory();
-        rules.SetLocalScore();
+        FindObjectOfType<LaptopScript>().newGraph();
+        FindObjectOfType<CreditHistorySCR>().newHistory();
+        FindObjectOfType<RulesScript>().SetLocalScore();
 
         /*LaptopScript.Instance.newGraph();
         CreditHistorySCR.Instance.newHistory();
