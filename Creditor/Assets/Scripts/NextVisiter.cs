@@ -29,7 +29,7 @@ public class NextVisiter : /*Manager<NextVisiter>*/MonoBehaviour
         rules = FindObjectOfType<RulesScript>();
         NextClient(Random.Range(0, 4));
 
-        Debug.LogError("first client");
+        //Debug.LogError("first client");
     }
 /*    public void AwakeCopy()
     {
