@@ -9,8 +9,9 @@ public class StarsSCR : MonoBehaviour /*Manager<EnderSCR>*/
     public int part;
     public UnityEvent end;
 
-    void Awake()
+    void Start()
     {
+        maxScore = PlayerPrefs.GetInt("maxScore");
         ImageDisabler();
         //part = maxScore / images.Length;
     }
@@ -49,6 +50,7 @@ public class StarsSCR : MonoBehaviour /*Manager<EnderSCR>*/
         {
             ImageDisabler();
             images[4].gameObject.SetActive(true);
+            PlayerPrefs.SetInt("level", PlayerPrefs.GetInt("level")+1);
             end.Invoke();
         }
     }

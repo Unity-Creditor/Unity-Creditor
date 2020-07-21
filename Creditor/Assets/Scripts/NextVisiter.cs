@@ -16,6 +16,7 @@ public class NextVisiter : /*Manager<NextVisiter>*/MonoBehaviour
     public RulesScript rules;
     //private LaptopScript;
     public UnityEvent newClient;
+    /*public int */
 
     private void Awake()
     {
