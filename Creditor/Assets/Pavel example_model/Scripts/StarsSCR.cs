@@ -50,7 +50,7 @@ public class StarsSCR : MonoBehaviour /*Manager<EnderSCR>*/
         {
             ImageDisabler();
             images[4].gameObject.SetActive(true);
-            PlayerPrefs.SetInt("level", PlayerPrefs.GetInt("level")+1);
+            PlayerPrefs.SetInt("openedLevel", PlayerPrefs.GetInt("level")+1);
             end.Invoke();
         }
     }
