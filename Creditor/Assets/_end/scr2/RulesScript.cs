@@ -14,6 +14,7 @@ public class RulesScript : MonoBehaviour /*Manager<RulesScript>*/
     public CreditHistorySCR creditHistory;
     public NextVisiter nextVisiter;
     public bool isEnd = false;
+    public int rightMans = 0;
     public int mans = 0;
 
 
@@ -26,6 +27,7 @@ public class RulesScript : MonoBehaviour /*Manager<RulesScript>*/
         creditHistory = FindObjectOfType<CreditHistorySCR>();
         //winPanel.SetActive(false);
         nextVisiter = FindObjectOfType<NextVisiter>();
+        //PlayerPrefs.SetInt("globalMans", 5);
     }
     /*public void AwakeCopy()
     {
@@ -40,13 +42,14 @@ public class RulesScript : MonoBehaviour /*Manager<RulesScript>*/
             if (PlayerPrefs.GetInt("creditType") == 0 && PlayerPrefs.GetInt("creditHistory") == 0 ||
                 PlayerPrefs.GetInt("creditType") == laptop.actualGraph && PlayerPrefs.GetInt("creditHistory")== creditHistory.actualHistory)
             {
-
-                Debug.Log(localScore);
+                rightMans++;
+                Debug.Log(rightMans);
                 //Debug.Log(localScore.ActualCreditHistory);
                 ScorePoint += localScore - 2;
+                PlayerPrefs.SetInt("money", ScorePoint*100);
                 //score.text = ScorePoint.ToString();
-                stars.ChangeStars(ScorePoint);
-                if (ScorePoint >= stars.maxScore)
+                if(PlayerPrefs.GetInt("isArcade")!=1) stars.ChangeStars(ScorePoint);
+                if (PlayerPrefs.GetInt("isArcade")!=1 && rightMans >= stars.maxScore)
                 {
                     winPanel.SetActive(true);
                     //GameObject.FindGameObjectWithTag("scene").SetActive(false);
@@ -59,6 +62,9 @@ public class RulesScript : MonoBehaviour /*Manager<RulesScript>*/
     public void SetLocalScore()
     {
         localScore = laptop.actualGraph + creditHistory.actualHistory;
+        mans++;
+        if (mans > PlayerPrefs.GetInt("globalMans") && PlayerPrefs.GetInt("isArcade")!=1) FindObjectOfType<StarsSCR>().EndVoid();
+        Debug.Log(mans+" "+PlayerPrefs.GetInt("globalMans"));
     }
     public void ForTaskEnder()
     {

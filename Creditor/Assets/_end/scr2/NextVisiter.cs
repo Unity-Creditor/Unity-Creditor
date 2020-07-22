@@ -15,16 +15,9 @@ public class NextVisiter : /*Manager<NextVisiter>*/MonoBehaviour
     public RulesScript rules;
     //private LaptopScript;
     //public UnityEvent newClient;
-    public int mansVisiter = 0;
-
-    public int globalMans;
-
 
     public void Start()
     {
-        mansVisiter = 0;
-        PlayerPrefs.SetInt("globalMans", 5);
-        globalMans = PlayerPrefs.GetInt("globalMans");
         laptop = FindObjectOfType<LaptopScript>();
         creditHistory = FindObjectOfType<CreditHistorySCR>();
         rules = FindObjectOfType<RulesScript>();
@@ -47,13 +40,7 @@ public class NextVisiter : /*Manager<NextVisiter>*/MonoBehaviour
 
     public void NextClient(int Graph)
     {
-        mansVisiter++;
-        Debug.Log(mansVisiter + " " + PlayerPrefs.GetInt("globalMans"));
-        if (mansVisiter > globalMans)
-        {
-            FindObjectOfType<StarsSCR>().EndVoid();
 
-        }
         /*        if (Graph == 100)
                 {
                     Graph = Random.Range(0, 10);

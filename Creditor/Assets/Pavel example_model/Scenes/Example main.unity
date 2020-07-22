@@ -204,7 +204,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 350, y: 254}
+  m_AnchoredPosition: {x: 350, y: 122.00006}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &82422061
@@ -251,7 +251,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 82422064}
-        m_MethodName: LoadMyScene
+        m_MethodName: LoadLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 900e0e45f895d3d4a901da24d8aa4d55, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5bfd370915d6ede4f912d234de02b487, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -310,15 +310,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b98581b72643bcb4a8d633bdb03f3f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadScene: 2
+  loadScene: 1
   level: 0
+  levelButton: 0
+  currentLevel: 0
   maxScore: 2
   creditType: 0
-  isArcade: 0
+  isArcade: 1
   creditHistory: 0
   stars: 0
   mans: 0
   isComplited: 0
+  localStars: 0
 --- !u!4 &123858864 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5543256760403899784, guid: 45cda1e4d358f11449002d364aba3589,
@@ -1067,7 +1070,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 179}
+  m_AnchoredPosition: {x: 0, y: 46.30005}
   m_SizeDelta: {x: 350, y: 350}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1738019540
@@ -1173,8 +1176,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b98581b72643bcb4a8d633bdb03f3f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadScene: 1
+  loadScene: 2
   level: 0
+  levelButton: 0
+  currentLevel: 0
   maxScore: 2
   creditType: 0
   isArcade: 1
@@ -1182,6 +1187,7 @@ MonoBehaviour:
   stars: 0
   mans: 0
   isComplited: 0
+  localStars: 0
 --- !u!4 &1794276682 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5635167300089977453, guid: 068287ab8c5c4124089ace795e617fb6,
@@ -1255,7 +1261,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -350, y: 254}
+  m_AnchoredPosition: {x: -350, y: 120}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1913812356

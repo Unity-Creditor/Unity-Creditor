@@ -1187,8 +1187,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b98581b72643bcb4a8d633bdb03f3f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadScene: 0
+  loadScene: 1
   level: 3
+  levelButton: 1
   currentLevel: 0
   maxScore: 2
   creditType: 0
@@ -1556,13 +1557,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadScene: 1
   level: 1
+  levelButton: 1
   currentLevel: 0
   maxScore: 0
   creditType: 0
   isArcade: 0
   creditHistory: 0
   stars: 0
-  mans: 0
+  mans: 10
   isComplited: 0
   localStars: 0
 --- !u!1 &705648529
@@ -3154,8 +3156,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b98581b72643bcb4a8d633bdb03f3f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadScene: 0
+  loadScene: 1
   level: 6
+  levelButton: 1
   currentLevel: 0
   maxScore: 6
   creditType: 0
@@ -3690,8 +3693,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b98581b72643bcb4a8d633bdb03f3f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadScene: 0
+  loadScene: 1
   level: 5
+  levelButton: 1
   currentLevel: 0
   maxScore: 2
   creditType: 0
@@ -3845,8 +3849,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b98581b72643bcb4a8d633bdb03f3f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadScene: 0
+  loadScene: 1
   level: 2
+  levelButton: 1
   currentLevel: 0
   maxScore: 2
   creditType: 0
@@ -4000,8 +4005,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b98581b72643bcb4a8d633bdb03f3f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadScene: 0
+  loadScene: 1
   level: 4
+  levelButton: 1
   currentLevel: 0
   maxScore: 2
   creditType: 0
@@ -4064,6 +4070,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadScene: 0
   level: 0
+  levelButton: 0
   currentLevel: 0
   maxScore: 2
   creditType: 0
