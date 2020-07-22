@@ -675,9 +675,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e5991cb8af5014896a9ed4b6658454, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadScene: 0
-  level: 3
-  maxScore: 0
 --- !u!1 &604544233
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,9 +1019,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e5991cb8af5014896a9ed4b6658454, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadScene: 0
-  level: 1
-  maxScore: 20
 --- !u!1 &705648529
 GameObject:
   m_ObjectHideFlags: 0
@@ -2477,9 +2471,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e5991cb8af5014896a9ed4b6658454, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadScene: 0
-  level: 6
-  maxScore: 20
 --- !u!1 &1695928374
 GameObject:
   m_ObjectHideFlags: 0
@@ -2987,9 +2978,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e5991cb8af5014896a9ed4b6658454, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadScene: 0
-  level: 5
-  maxScore: 0
 --- !u!1 &1966560460
 GameObject:
   m_ObjectHideFlags: 0
@@ -3122,9 +3110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e5991cb8af5014896a9ed4b6658454, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadScene: 0
-  level: 2
-  maxScore: 30
 --- !u!1 &2017664610
 GameObject:
   m_ObjectHideFlags: 0
@@ -3257,9 +3242,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e5991cb8af5014896a9ed4b6658454, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadScene: 0
-  level: 4
-  maxScore: 0
 --- !u!1 &2144154087
 GameObject:
   m_ObjectHideFlags: 0
@@ -3308,12 +3290,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2144154087}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55e5991cb8af5014896a9ed4b6658454, type: 3}
+  m_Script: {fileID: 11500000, guid: b98581b72643bcb4a8d633bdb03f3f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   loadScene: 0
   level: 0
-  maxScore: 0
+  maxScore: 2
 --- !u!114 &2144154090
 MonoBehaviour:
   m_ObjectHideFlags: 0
