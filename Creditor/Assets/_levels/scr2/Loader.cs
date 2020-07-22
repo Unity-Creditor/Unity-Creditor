@@ -9,6 +9,7 @@ public class Loader : MonoBehaviour
     public int loadScene;
     public int level;
 
+    public int currentLevel;
     public int maxScore = 2;
     public int creditType;
     public int isArcade;

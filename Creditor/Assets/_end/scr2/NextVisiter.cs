@@ -18,10 +18,7 @@ public class NextVisiter : /*Manager<NextVisiter>*/MonoBehaviour
     //public UnityEvent newClient;
     /*public int */
 
-    private void Awake()
-    {
 
-    }
     public void Start()
     {
         laptop = FindObjectOfType<LaptopScript>();

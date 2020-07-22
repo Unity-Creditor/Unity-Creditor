@@ -313,6 +313,12 @@ MonoBehaviour:
   loadScene: 2
   level: 0
   maxScore: 2
+  creditType: 0
+  isArcade: 0
+  creditHistory: 0
+  stars: 0
+  mans: 0
+  isComplited: 0
 --- !u!4 &123858864 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5543256760403899784, guid: 45cda1e4d358f11449002d364aba3589,
@@ -1108,7 +1114,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1738019543}
-        m_MethodName: LoadMyScene
+        m_MethodName: LoadLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1170,6 +1176,12 @@ MonoBehaviour:
   loadScene: 1
   level: 0
   maxScore: 2
+  creditType: 0
+  isArcade: 1
+  creditHistory: 0
+  stars: 0
+  mans: 0
+  isComplited: 0
 --- !u!4 &1794276682 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5635167300089977453, guid: 068287ab8c5c4124089ace795e617fb6,

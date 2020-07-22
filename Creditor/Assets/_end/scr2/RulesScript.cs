@@ -14,9 +14,7 @@ public class RulesScript : MonoBehaviour /*Manager<RulesScript>*/
     public CreditHistorySCR creditHistory;
     public bool isEnd = false;
 
-    private void Awake()
-    {
-    }
+
     private void Start()
     {
         winPanel = GameObject.FindGameObjectWithTag("winPanel");
