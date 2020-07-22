@@ -1096,7 +1096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41e0c58f8f081b741ab407e69ad4c5f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Visiter: {fileID: 0}
+  Visiter: {fileID: 4054732016449778611, guid: a0818739b226fee43b7587f5207b32f1, type: 3}
   Spawn: {x: 0, y: 0, z: 0}
   actualPosition: {x: 0, y: 0.2, z: 0}
   CreditHistoryColor:
