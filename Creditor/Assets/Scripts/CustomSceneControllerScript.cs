@@ -1,4 +1,5 @@
-﻿using System.Collections;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -43,9 +44,24 @@ public class CustomSceneControllerScript : Manager<CustomSceneControllerScript>
 
     public void ChangeActiveObject(int num = 0)
     {
-      Destroy(ActiveObjects[ActivatedShop]);
-      ActiveObjects[ActivatedShop] = Instantiate(ScenesItems.rows[ActivatedShop].row[num]);
-      ItemNumber[ActivatedShop] = num;
+
+      if (ScenesItems.rows[ActivatedShop].row.Length - 1 >= num)
+      {
+        Destroy(ActiveObjects[ActivatedShop]);
+        ActiveObjects[ActivatedShop] = Instantiate(ScenesItems.rows[ActivatedShop].row[num]);
+        ItemNumber[ActivatedShop] = num;
+      }
+
+/*      try
+      {
+        Destroy(ActiveObjects[ActivatedShop]);
+        ActiveObjects[ActivatedShop] = Instantiate(ScenesItems.rows[ActivatedShop].row[num]);
+        ItemNumber[ActivatedShop] = num;
+      }
+      catch (Exception e)
+      {
+        Debug.Log("nnn");
+      }*/
     }
 
 
