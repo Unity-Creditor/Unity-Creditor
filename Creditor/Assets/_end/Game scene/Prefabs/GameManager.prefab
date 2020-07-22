@@ -1405,6 +1405,8 @@ MonoBehaviour:
   laptop: {fileID: 6443863699986381905}
   creditHistory: {fileID: 4856254514523348881}
   rules: {fileID: 5088857981226829367}
+  mans: 0
+  globalMans: 0
 --- !u!114 &5088857981226829367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1425,7 +1427,9 @@ MonoBehaviour:
   score: {fileID: 0}
   laptop: {fileID: 6443863699986381905}
   creditHistory: {fileID: 4856254514523348881}
+  nextVisiter: {fileID: 0}
   isEnd: 0
+  mans: 0
 --- !u!1 &6200166755241123402
 GameObject:
   m_ObjectHideFlags: 0

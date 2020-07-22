@@ -11,11 +11,11 @@ public class StarsSCR : MonoBehaviour /*Manager<EnderSCR>*/
 
     void Start()
     {
-        //PlayerPrefs.SetInt("isArcade", 0);
+        PlayerPrefs.SetInt("isArcade", 0);
         if (PlayerPrefs.GetInt("isArcade") == 1) gameObject.SetActive(false);
-        maxScore = PlayerPrefs.GetInt("maxScore");
+        //maxScore = PlayerPrefs.GetInt("maxScore");
         ImageDisabler();
-        //part = maxScore / images.Length;
+        part = maxScore / images.Length;
     }
 
     void ImageDisabler()
@@ -46,7 +46,7 @@ public class StarsSCR : MonoBehaviour /*Manager<EnderSCR>*/
         if (score > part * 3 && score < maxScore-1)
         {
             ImageDisabler();
-            images[3].gameObject.SetActive(true);
+            images[2].gameObject.SetActive(true);
         }
         if (/*score > maxScore / 5 * 4 &&*/score >= maxScore)
         {
@@ -56,5 +56,9 @@ public class StarsSCR : MonoBehaviour /*Manager<EnderSCR>*/
             
             end.Invoke();
         }
+    }
+    public void EndVoid()
+    {
+        end.Invoke();
     }
 }

@@ -12,18 +12,20 @@ public class RulesScript : MonoBehaviour /*Manager<RulesScript>*/
     public TextMeshProUGUI score;
     public LaptopScript laptop;
     public CreditHistorySCR creditHistory;
+    public NextVisiter nextVisiter;
     public bool isEnd = false;
+    public int mans = 0;
 
 
     private void Start()
     {
         winPanel = GameObject.FindGameObjectWithTag("winPanel");
         scene = GameObject.FindGameObjectWithTag("scene");
-/*        stars = FindObjectOfType<StarsSCR>();
+        stars = FindObjectOfType<StarsSCR>();
         laptop = FindObjectOfType<LaptopScript>();
-        creditHistory = FindObjectOfType<CreditHistorySCR>();*/
+        creditHistory = FindObjectOfType<CreditHistorySCR>();
         //winPanel.SetActive(false);
-
+        nextVisiter = FindObjectOfType<NextVisiter>();
     }
     /*public void AwakeCopy()
     {
@@ -35,17 +37,22 @@ public class RulesScript : MonoBehaviour /*Manager<RulesScript>*/
     {
         if (RightSwipe)
         {
-            Debug.Log(localScore);
-            //Debug.Log(localScore.ActualCreditHistory);
-            ScorePoint += localScore - 2;
-            //score.text = ScorePoint.ToString();
-            stars.ChangeStars(ScorePoint);
-            if (ScorePoint >= stars.maxScore)
+            if (PlayerPrefs.GetInt("creditType") == 0 && PlayerPrefs.GetInt("creditHistory") == 0 ||
+                PlayerPrefs.GetInt("creditType") == laptop.actualGraph && PlayerPrefs.GetInt("creditHistory")== creditHistory.actualHistory)
             {
-                winPanel.SetActive(true);
-                //GameObject.FindGameObjectWithTag("scene").SetActive(false);
-                FindObjectOfType<VisiterAwake>().gameObject.SetActive(false);
-                isEnd = true;
+
+                Debug.Log(localScore);
+                //Debug.Log(localScore.ActualCreditHistory);
+                ScorePoint += localScore - 2;
+                //score.text = ScorePoint.ToString();
+                stars.ChangeStars(ScorePoint);
+                if (ScorePoint >= stars.maxScore)
+                {
+                    winPanel.SetActive(true);
+                    //GameObject.FindGameObjectWithTag("scene").SetActive(false);
+                    FindObjectOfType<VisiterAwake>().gameObject.SetActive(false);
+                    isEnd = true;
+                }
             }
         }
     }

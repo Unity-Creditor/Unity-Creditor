@@ -21,7 +21,7 @@ public class Loader : MonoBehaviour
 
     private void Start()
     {
-        //PlayerPrefs.SetInt("openedLevel", 1);
+        //PlayerPrefs.SetInt("openedLevel", 6);
 
         if (PlayerPrefs.GetInt("openedLevel") >= level)
         {
@@ -46,7 +46,7 @@ public class Loader : MonoBehaviour
         PlayerPrefs.SetInt("creditHistory", creditHistory);
         PlayerPrefs.SetInt("stars", stars);
         //PlayerPrefs.SetInt("localStars", stars);
-        PlayerPrefs.SetInt("mans", mans);
+        PlayerPrefs.SetInt("globalMans", mans);
         PlayerPrefs.SetInt("isComplited",  isComplited);
         SceneManager.LoadScene(loadScene);
     }
