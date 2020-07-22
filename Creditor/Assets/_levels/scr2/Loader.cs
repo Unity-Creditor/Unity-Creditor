@@ -35,7 +35,7 @@ public class Loader : MonoBehaviour
             {
                 GetComponent<Button>().interactable = false;
             }
-            ClearLevel();
+            //ClearLevel();
         }
     }
 
@@ -68,7 +68,7 @@ public class Loader : MonoBehaviour
         //PlayerPrefs.SetInt("localStars", stars);
         PlayerPrefs.SetInt("globalMans", mans);
         PlayerPrefs.SetInt("isComplited", isComplited);
-        PlayerPrefs.SetInt("currentLevel", isComplited);
+        PlayerPrefs.SetInt("currentLevel", level);
         SceneManager.LoadScene(loadScene);
     }
     public void ReloadScene()

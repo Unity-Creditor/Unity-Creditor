@@ -39,31 +39,31 @@ public class StarsSCR : MonoBehaviour /*Manager<EnderSCR>*/
             if (score < maxScore / part * 1)
             {
                 ImageDisabler();
-                stars = 0;
+                PlayerPrefs.SetInt("localStars", 0);
                 images[0].gameObject.SetActive(true);
             }
             if (score > part * 1 && score < part * 2)
             {
                 ImageDisabler();
-                stars = 1;
+                PlayerPrefs.SetInt("localStars", 1);
                 images[1].gameObject.SetActive(true);
             }
             if (score > part * 2 && score < part * 3)
             {
                 ImageDisabler();
-                stars = 2;
+                PlayerPrefs.SetInt("localStars", 2);
                 images[2].gameObject.SetActive(true);
             }
             if (score > part * 3 && score < maxScore - 1)
             {
                 ImageDisabler();
-                stars = 2;
+                PlayerPrefs.SetInt("localStars", 2);
                 images[2].gameObject.SetActive(true);
             }
             if (/*score > maxScore / 5 * 4 &&*/score >= maxScore)
             {
                 ImageDisabler();
-                stars = 3;
+                PlayerPrefs.SetInt("localStars", 3);
                 images[3].gameObject.SetActive(true);
                 end.Invoke();
             }
