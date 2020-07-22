@@ -17,10 +17,12 @@ public class Loader : MonoBehaviour
     public int stars;
     public int mans;
     public int isComplited;
+    public int localStars;
 
     private void Start()
     {
-        PlayerPrefs.SetInt("openedLevel", 1);
+        //PlayerPrefs.SetInt("openedLevel", 1);
+
         if (PlayerPrefs.GetInt("openedLevel") >= level)
         {
             GetComponent<Button>().interactable = true;
@@ -43,6 +45,7 @@ public class Loader : MonoBehaviour
         PlayerPrefs.SetInt("isArcade", isArcade);
         PlayerPrefs.SetInt("creditHistory", creditHistory);
         PlayerPrefs.SetInt("stars", stars);
+        //PlayerPrefs.SetInt("localStars", stars);
         PlayerPrefs.SetInt("mans", mans);
         PlayerPrefs.SetInt("isComplited",  isComplited);
         SceneManager.LoadScene(loadScene);
