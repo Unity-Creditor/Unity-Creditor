@@ -11,7 +11,7 @@ public class Loader : MonoBehaviour
     public int maxScore = 2;
     private void Start()
     {
-        PlayerPrefs.SetInt("openedLevel", 1);
+        //PlayerPrefs.SetInt("openedLevel", 1);
         if (PlayerPrefs.GetInt("openedLevel") >= level)
         {
             GetComponent<Button>().interactable = true;
