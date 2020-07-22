@@ -180,6 +180,7 @@ GameObject:
   - component: {fileID: 82422063}
   - component: {fileID: 82422062}
   - component: {fileID: 82422061}
+  - component: {fileID: 82422064}
   m_Layer: 5
   m_Name: LEVELS
   m_TagString: Untagged
@@ -248,7 +249,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 82422062}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 82422064}
+        m_MethodName: LoadMyScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &82422062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,6 +298,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 82422059}
   m_CullTransparentMesh: 0
+--- !u!114 &82422064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82422059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98581b72643bcb4a8d633bdb03f3f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadScene: 2
+  level: 0
+  maxScore: 2
 --- !u!4 &123858864 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5543256760403899784, guid: 45cda1e4d358f11449002d364aba3589,
@@ -1137,10 +1164,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1738019538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55e5991cb8af5014896a9ed4b6658454, type: 3}
+  m_Script: {fileID: 11500000, guid: b98581b72643bcb4a8d633bdb03f3f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   loadScene: 1
+  level: 0
+  maxScore: 2
 --- !u!4 &1794276682 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5635167300089977453, guid: 068287ab8c5c4124089ace795e617fb6,

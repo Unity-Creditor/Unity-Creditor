@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4054732016449778609}
   - component: {fileID: 4054732016449778608}
-  - component: {fileID: 4054732016449778614}
-  - component: {fileID: 250445388270803708}
+  - component: {fileID: 2546507751072428475}
+  - component: {fileID: 2175547031915210762}
   m_Layer: 0
   m_Name: Visiter
   m_TagString: Untagged
@@ -59,7 +59,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 2.5}
   m_EdgeRadius: 0
---- !u!114 &4054732016449778614
+--- !u!114 &2546507751072428475
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -68,13 +68,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 4054732016449778611}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 478461433fabed84782a4484c504b6de, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ccf6114822d4014dbe1556a5e1cf087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spawn: {x: 0, y: 0, z: 0}
+  actualPosition: {x: 0, y: 0.2, z: 0}
+  faces:
+  - {fileID: 2350297534053388759, guid: 3166190413495254a97e30680de154ec, type: 3}
+  - {fileID: 8507980137252276012, guid: 8140ef1ca6aeb27489e33f61d8235e36, type: 3}
+  - {fileID: 7477005705412488926, guid: 9dd768d999fb20445bf2e57529505d6f, type: 3}
+  spriteRenderer: {fileID: 0}
+--- !u!114 &2175547031915210762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4054732016449778611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48ea1a9fb0ac27141b139e270363505f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   OnSwipe:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3015293933697112469, guid: 089d9ba6898794b45b1cee7645204482,
+      - m_Target: {fileID: 1100456586411650189, guid: 0492b2cf7a317b843b6a111971f6dfdb,
           type: 3}
         m_MethodName: NextClient
         m_Mode: 3
@@ -89,7 +108,7 @@ MonoBehaviour:
   SwipeYes:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3896938975209167001, guid: 089d9ba6898794b45b1cee7645204482,
+      - m_Target: {fileID: 5088857981226829367, guid: 0492b2cf7a317b843b6a111971f6dfdb,
           type: 3}
         m_MethodName: RightSpriteFunc
         m_Mode: 1
@@ -102,21 +121,3 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   Score: 0
---- !u!114 &250445388270803708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4054732016449778611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19296ecbc5a478547bfc4ac5416a823e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Spawn: {x: 0, y: -0.5, z: 0}
-  actualPosition: {x: 0, y: 1, z: 0}
-  faces:
-  - {fileID: 2350297534053388759, guid: 3166190413495254a97e30680de154ec, type: 3}
-  - {fileID: 8507980137252276012, guid: 8140ef1ca6aeb27489e33f61d8235e36, type: 3}
-  - {fileID: 7477005705412488926, guid: 9dd768d999fb20445bf2e57529505d6f, type: 3}
