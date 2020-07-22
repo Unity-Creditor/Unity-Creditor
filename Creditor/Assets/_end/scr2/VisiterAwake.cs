@@ -8,7 +8,7 @@ public class VisiterAwake : MonoBehaviour
     //public Color[] CreditHistoryColor = new Color[3];
     public SpriteRenderer spriteRenderer;
 
-    void Awake()
+    void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         int rand = Random.Range(0, faces.Length);

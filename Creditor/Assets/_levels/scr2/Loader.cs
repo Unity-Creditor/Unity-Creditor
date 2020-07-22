@@ -8,10 +8,18 @@ public class Loader : MonoBehaviour
 {
     public int loadScene;
     public int level;
+
     public int maxScore = 2;
+    public int creditType;
+    public int isArcade;
+    public int creditHistory;
+    public int stars;
+    public int mans;
+    public int isComplited;
+
     private void Start()
     {
-        //PlayerPrefs.SetInt("openedLevel", 1);
+        PlayerPrefs.SetInt("openedLevel", 1);
         if (PlayerPrefs.GetInt("openedLevel") >= level)
         {
             GetComponent<Button>().interactable = true;
@@ -30,6 +38,12 @@ public class Loader : MonoBehaviour
     public void LoadLevel()
     {
         PlayerPrefs.SetInt("maxScore", maxScore);
+        PlayerPrefs.SetInt("creditType", creditType);
+        PlayerPrefs.SetInt("isArcade", isArcade);
+        PlayerPrefs.SetInt("creditHistory", creditHistory);
+        PlayerPrefs.SetInt("stars", stars);
+        PlayerPrefs.SetInt("mans", mans);
+        PlayerPrefs.SetInt("isComplited",  isComplited);
         SceneManager.LoadScene(loadScene);
     }
     public void ReloadScene()

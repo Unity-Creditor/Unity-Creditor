@@ -21,10 +21,10 @@ public class RulesScript : MonoBehaviour /*Manager<RulesScript>*/
     {
         winPanel = GameObject.FindGameObjectWithTag("winPanel");
         scene = GameObject.FindGameObjectWithTag("scene");
-        stars = FindObjectOfType<StarsSCR>();
+/*        stars = FindObjectOfType<StarsSCR>();
         laptop = FindObjectOfType<LaptopScript>();
-        creditHistory = FindObjectOfType<CreditHistorySCR>();
-        winPanel.SetActive(false);
+        creditHistory = FindObjectOfType<CreditHistorySCR>();*/
+        //winPanel.SetActive(false);
 
     }
     /*public void AwakeCopy()
@@ -54,5 +54,13 @@ public class RulesScript : MonoBehaviour /*Manager<RulesScript>*/
     public void SetLocalScore()
     {
         localScore = laptop.actualGraph + creditHistory.actualHistory;
+    }
+    public void ForTaskEnder()
+    {
+        isEnd = true;
+    }
+    public void ForTaskUnEnder()
+    {
+        isEnd = false;
     }
 }
