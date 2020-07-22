@@ -29,7 +29,7 @@ public class Loader : MonoBehaviour
 
     public void LoadLevel()
     {
-        PlayerPrefs.SetInt("maxScore",20);
+        PlayerPrefs.SetInt("maxScore", maxScore);
         SceneManager.LoadScene(loadScene);
     }
     public void ReloadScene()

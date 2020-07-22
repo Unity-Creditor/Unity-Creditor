@@ -854,10 +854,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1387357597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55e5991cb8af5014896a9ed4b6658454, type: 3}
+  m_Script: {fileID: 11500000, guid: b98581b72643bcb4a8d633bdb03f3f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   loadScene: 0
+  level: 0
+  maxScore: 2
 --- !u!1 &1470095640
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,10 +908,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1470095640}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55e5991cb8af5014896a9ed4b6658454, type: 3}
+  m_Script: {fileID: 11500000, guid: b98581b72643bcb4a8d633bdb03f3f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   loadScene: 0
+  level: 0
+  maxScore: 2
 --- !u!114 &1470095643
 MonoBehaviour:
   m_ObjectHideFlags: 0
