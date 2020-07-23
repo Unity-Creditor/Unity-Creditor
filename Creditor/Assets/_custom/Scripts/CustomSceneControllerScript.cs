@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class CustomSceneControllerScript : Manager<CustomSceneControllerScript>
+public class CustomSceneControllerScript : MonoBehaviour/* Manager<CustomSceneControllerScript>*/
 {
     public ArraysLayout ScenesItems;
     public Button[] StoreButtons = new Button[1];
