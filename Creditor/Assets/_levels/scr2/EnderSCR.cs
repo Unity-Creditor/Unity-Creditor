@@ -18,6 +18,7 @@ public class EnderSCR : MonoBehaviour
         {
             PlayerPrefs.SetInt("openedLevel", PlayerPrefs.GetInt("openedLevel") + 1);
         }
+        PlayerPrefs.SetInt("stars", PlayerPrefs.GetInt("stars")+ PlayerPrefs.GetInt("localStars"));
         GetComponent<AudioSource>().Play();
     }
 }

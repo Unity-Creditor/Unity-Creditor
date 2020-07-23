@@ -24,8 +24,10 @@ public class Loader : MonoBehaviour
         //PlayerPrefs.SetInt("openedLevel", 1);
         if (levelButton)
         {
+            //ClearLevel();
             if (PlayerPrefs.GetInt("currentLevel") == level)
             {
+                localStars = PlayerPrefs.GetInt("localStars");
                 GetComponentInChildren<LevelStars>().SetStars();
             }
             if (PlayerPrefs.GetInt("openedLevel") >= level)

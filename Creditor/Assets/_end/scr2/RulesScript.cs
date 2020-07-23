@@ -28,7 +28,7 @@ public class RulesScript : MonoBehaviour /*Manager<RulesScript>*/
         creditHistory = FindObjectOfType<CreditHistorySCR>();
         //winPanel.SetActive(false);
         nextVisiter = FindObjectOfType<NextVisiter>();
-
+        creditType = FindObjectOfType<CreditTypeSCR>();
         //PlayerPrefs.SetInt("globalMans", 5);
     }
     /*public void AwakeCopy()

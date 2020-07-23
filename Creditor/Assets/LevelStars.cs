@@ -6,6 +6,7 @@ public class LevelStars : MonoBehaviour
 {
 
     public GameObject[] stars;
+    public GameObject parent;
     void Start()
     {
         //SetStars();
@@ -21,7 +22,7 @@ public class LevelStars : MonoBehaviour
     public void SetStars()
     {
         Disabler();
-        stars[GetComponentInParent<Loader>().localStars].SetActive(true);
+        stars[parent.GetComponent<Loader>().localStars].SetActive(true);
     }
 
 }
