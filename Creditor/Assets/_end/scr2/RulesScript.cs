@@ -47,7 +47,7 @@ public class RulesScript : MonoBehaviour /*Manager<RulesScript>*/
                 rightMans++;
                 Debug.Log(rightMans);
                 //Debug.Log(localScore.ActualCreditHistory);
-                ScorePoint += localScore - 2;
+                ScorePoint += Mathf.Abs(localScore - 2);
                 PlayerPrefs.SetInt("money", ScorePoint*100);
                 //score.text = ScorePoint.ToString();
                 if(PlayerPrefs.GetInt("isArcade")!=1) stars.ChangeStars(ScorePoint);

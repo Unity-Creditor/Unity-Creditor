@@ -14,7 +14,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_levels/Level mechanic/Level.unity
     guid: 260d24c0f3e33594eb061472d57638f2
-  - enabled: 1
-    path: Assets/Pavel example_model/Scenes/Example main.unity
-    guid: 304a540b01feadb46a74f9bfcc244506
   m_configObjects: {}

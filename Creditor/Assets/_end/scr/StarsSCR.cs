@@ -9,6 +9,7 @@ public class StarsSCR : MonoBehaviour /*Manager<EnderSCR>*/
     public int part;
     public UnityEvent end;
     public int stars = 0;
+    
 
     private void Awake()
     {
@@ -60,6 +61,7 @@ public class StarsSCR : MonoBehaviour /*Manager<EnderSCR>*/
                 PlayerPrefs.SetInt("localStars", 2);
                 images[2].gameObject.SetActive(true);
             }
+            stars = PlayerPrefs.GetInt("localStars");
             if (/*score > maxScore / 5 * 4 &&*/score >= maxScore)
             {
                 ImageDisabler();

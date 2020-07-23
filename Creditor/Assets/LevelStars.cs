@@ -19,10 +19,10 @@ public class LevelStars : MonoBehaviour
             item.SetActive(false);
         }
     }
-    public void SetStars()
+    public void SetStars(int stars)
     {
         Disabler();
-        stars[parent.GetComponent<Loader>().localStars].SetActive(true);
+        this.stars[stars].SetActive(true);
     }
 
 }

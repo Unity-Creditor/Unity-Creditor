@@ -8,7 +8,7 @@ public class Loader : MonoBehaviour
     public int level;
     public bool levelButton = false;
 
-    public int currentLevel;
+    //public int currentLevel;
     public int maxScore = 2;
     public int creditType;
     public int isArcade;
@@ -28,7 +28,7 @@ public class Loader : MonoBehaviour
             if (PlayerPrefs.GetInt("currentLevel") == level)
             {
                 localStars = PlayerPrefs.GetInt("localStars");
-                GetComponentInChildren<LevelStars>().SetStars();
+                GetComponentInChildren<LevelStars>().SetStars(localStars);
             }
             if (PlayerPrefs.GetInt("openedLevel") >= level)
             {
@@ -67,7 +67,7 @@ public class Loader : MonoBehaviour
         PlayerPrefs.SetInt("creditType", creditType);
         PlayerPrefs.SetInt("isArcade", isArcade);
         PlayerPrefs.SetInt("creditHistory", creditHistory);
-        PlayerPrefs.SetInt("localStars", stars);
+        //PlayerPrefs.SetInt("localStars", 0);
         //PlayerPrefs.SetInt("localStars", stars);
         PlayerPrefs.SetInt("globalMans", mans);
         PlayerPrefs.SetInt("isComplited", isComplited);
