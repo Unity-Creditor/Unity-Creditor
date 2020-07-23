@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.Events;
 
 public class NextVisiter : /*Manager<NextVisiter>*/MonoBehaviour
 {
@@ -16,26 +15,21 @@ public class NextVisiter : /*Manager<NextVisiter>*/MonoBehaviour
     public RulesScript rules;
     //private LaptopScript;
     //public UnityEvent newClient;
-    /*public int */
 
-    private void Awake()
-    {
-
-    }
     public void Start()
     {
         laptop = FindObjectOfType<LaptopScript>();
         creditHistory = FindObjectOfType<CreditHistorySCR>();
         rules = FindObjectOfType<RulesScript>();
         NextClient(Random.Range(0, 4));
-
+        //PlayerPrefs.SetInt("mans",3);
         //Debug.LogError("first client");
     }
-/*    public void AwakeCopy()
-    {
-        NextClient(Random.Range(0, 4));
-        Debug.LogError("first client");
-    }*/
+    /*    public void AwakeCopy()
+        {
+            NextClient(Random.Range(0, 4));
+            Debug.LogError("first client");
+        }*/
     /*public void Update()
     {
         if (!FindObjectOfType<VisiterAwake>())
@@ -46,6 +40,7 @@ public class NextVisiter : /*Manager<NextVisiter>*/MonoBehaviour
 
     public void NextClient(int Graph)
     {
+
         /*        if (Graph == 100)
                 {
                     Graph = Random.Range(0, 10);
