@@ -7898,7 +7898,7 @@ PrefabInstance:
     - target: {fileID: 7516900909585951443, guid: 70755e30cb15c774ab4667a263902fe2,
         type: 3}
       propertyPath: nameOfTheDlta
-      value: dollars
+      value: money
       objectReference: {fileID: 0}
     - target: {fileID: 7516900909946503178, guid: 70755e30cb15c774ab4667a263902fe2,
         type: 3}
