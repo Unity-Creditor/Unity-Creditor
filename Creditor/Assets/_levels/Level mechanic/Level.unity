@@ -1558,7 +1558,7 @@ MonoBehaviour:
   loadScene: 1
   level: 1
   levelButton: 1
-  currentLevel: 0
+  currentLevel: 1
   maxScore: 0
   creditType: 0
   isArcade: 0
