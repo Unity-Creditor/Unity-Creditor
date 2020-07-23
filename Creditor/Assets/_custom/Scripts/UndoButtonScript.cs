@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class UndoButtonScript : MonoBehaviour
 {
     Button Undo;
+    public GameObject UndoUI, ThisUI;
 
     void Start()
     {
@@ -16,6 +17,8 @@ public class UndoButtonScript : MonoBehaviour
 
     void UndoFunction()
     {
-      SceneManager.LoadScene(0);
+      UndoUI.SetActive(true);
+      ThisUI.SetActive(false);
+      //SceneManager.LoadScene(0);
     }
 }

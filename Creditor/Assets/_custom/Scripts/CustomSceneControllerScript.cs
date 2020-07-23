@@ -26,7 +26,7 @@ public class CustomSceneControllerScript : Manager<CustomSceneControllerScript>
 
     void Start()
     {
-      //PlayerPrefs.SetInt("dollars", PlayerPrefs.GetInt("dollars", 0) + AddCoin);
+      //PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money", 0) + AddCoin);
       //PlayerPrefs.Save();
 
       for (int i = 0; i < ItemNumber.Length; i++)
@@ -34,7 +34,7 @@ public class CustomSceneControllerScript : Manager<CustomSceneControllerScript>
         ItemNumber[i] = PlayerPrefs.GetInt("ItemNumber" + i, 0);
       }
 
-      Coins.text = "" + PlayerPrefs.GetInt("dollars");//money
+      Coins.text = "" + PlayerPrefs.GetInt("money");//money
       ActiveObjects = new GameObject[ScenesItems.rows.Length];
       for(int i = 0; i < ScenesItems.rows.Length; ++i)
       {
@@ -60,15 +60,15 @@ public class CustomSceneControllerScript : Manager<CustomSceneControllerScript>
     public void ChangeActiveObject(int num = 0)
     {
 
-      if ((ScenesItems.rows[ActivatedShop].row.Length - 1 >= num) && (ItemNumber[ActivatedShop] != num) && (PlayerPrefs.GetInt("dollars") - (num + 1) * Cost) >= 0)
+      if ((ScenesItems.rows[ActivatedShop].row.Length - 1 >= num) && (ItemNumber[ActivatedShop] != num) && (PlayerPrefs.GetInt("money") - (num + 1) * Cost) >= 0)
       {
         Destroy(ActiveObjects[ActivatedShop]);
         ActiveObjects[ActivatedShop] = Instantiate(ScenesItems.rows[ActivatedShop].row[num]);
 
-        PlayerPrefs.SetInt("dollars", PlayerPrefs.GetInt("dollars") - (num + 1) * Cost);
+        PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") - (num + 1) * Cost);
         PlayerPrefs.SetInt("ItemNumber" + ActivatedShop, num);
 
-        Coins.text = "" + PlayerPrefs.GetInt("dollars");
+        Coins.text = "" + PlayerPrefs.GetInt("money");
         ItemNumber[ActivatedShop] = num;
       }
     }
