@@ -1473,7 +1473,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.24313727, g: 0.24313727, b: 0.24313727, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -3854,11 +3854,11 @@ MonoBehaviour:
   levelButton: 1
   currentLevel: 0
   maxScore: 2
-  creditType: 0
+  creditType: 1
   isArcade: 0
-  creditHistory: 0
+  creditHistory: 1
   stars: 0
-  mans: 0
+  mans: 20
   isComplited: 0
   localStars: 0
 --- !u!1 &2017664610
