@@ -20,6 +20,7 @@ public class Loader : MonoBehaviour
 
     private void Start()
     {
+        ClearLevel();
         //PlayerPrefs.SetInt("openedLevel", 1);
         if (levelButton)
         {
@@ -35,7 +36,6 @@ public class Loader : MonoBehaviour
             {
                 GetComponent<Button>().interactable = false;
             }
-            //ClearLevel();
         }
     }
 
@@ -43,13 +43,14 @@ public class Loader : MonoBehaviour
     {
         PlayerPrefs.SetInt("maxScore", 0);
         PlayerPrefs.SetInt("creditType", 0);
+        PlayerPrefs.SetInt("openedLevel", 1);
         PlayerPrefs.SetInt("isArcade", 0);
         PlayerPrefs.SetInt("creditHistory", 0);
         PlayerPrefs.SetInt("localStars", 0);
         //PlayerPrefs.SetInt("localStars", stars);
         PlayerPrefs.SetInt("globalMans", 0);
         PlayerPrefs.SetInt("isComplited", 0);
-        PlayerPrefs.SetInt("currentLevel", 0);
+        PlayerPrefs.SetInt("currentLevel", 1);
         //SceneManager.LoadScene(loadScene);
     }
 
