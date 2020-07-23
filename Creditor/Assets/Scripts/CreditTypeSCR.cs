@@ -19,7 +19,7 @@ public class CreditTypeSCR : MonoBehaviour
         _3.SetActive(false);
         //SetHistory()
     }
-    public void SetType(int quality)
+    void SetType(int quality)
     {
         actualType = quality;
         if (quality == 0)

@@ -68,6 +68,8 @@ public class NextVisiter : /*Manager<NextVisiter>*/MonoBehaviour
         FindObjectOfType<LaptopScript>().newGraph();
         FindObjectOfType<CreditHistorySCR>().newHistory();
         FindObjectOfType<RulesScript>().SetLocalScore();
+        FindObjectOfType<CreditTypeSCR>().newHistory();
+        FindObjectOfType<PledgeController>().newPledge();
 
         /*LaptopScript.Instance.newGraph();
         CreditHistorySCR.Instance.newHistory();
