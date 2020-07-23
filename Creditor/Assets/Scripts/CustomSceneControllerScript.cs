@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CustomSceneControllerScript : Manager<CustomSceneControllerScript>
 {
@@ -10,17 +11,30 @@ public class CustomSceneControllerScript : Manager<CustomSceneControllerScript>
     public Button[] StoreButtons = new Button[1];
     public Button[] StoreItemsButton = new Button[5];
     public GameObject[] ActiveObjects;
+    public int[] ItemNumber = new int [13];
+
+    public int Cost = 0;
+    public int AddCoin = 100;
+    public GameObject OthersButtons;
     public Vector3 StartButtonPosition = new Vector3(0, -710, 0);
+    public TextMeshProUGUI Coins;
 
     public int ActivatedShop;
     int PreviousActivatedShop = -1;
 
-    public int[] ItemNumber = new int [13];
 
 
     void Start()
     {
+      //PlayerPrefs.SetInt("dollars", PlayerPrefs.GetInt("dollars", 0) + AddCoin);
+      //PlayerPrefs.Save();
 
+      for (int i = 0; i < ItemNumber.Length; i++)
+      {
+        ItemNumber[i] = PlayerPrefs.GetInt("ItemNumber" + i, 0);
+      }
+
+      Coins.text = "" + PlayerPrefs.GetInt("dollars");
       ActiveObjects = new GameObject[ScenesItems.rows.Length];
       for(int i = 0; i < ScenesItems.rows.Length; ++i)
       {
@@ -33,11 +47,12 @@ public class CustomSceneControllerScript : Manager<CustomSceneControllerScript>
     public void ChangeStore(int num = 0)
     {
 
-      Debug.Log(num + "" + ActivatedShop);
+      //Debug.Log(num + "" + ActivatedShop);
       StoreButtons[ActivatedShop].GetComponent<Image>().color = Color.white;
       StoreButtons[num].GetComponent<Image>().color = Color.gray;
 
       ActivatedShop = num;
+      OthersButtons.SetActive(true);
 
     }
 
@@ -45,34 +60,17 @@ public class CustomSceneControllerScript : Manager<CustomSceneControllerScript>
     public void ChangeActiveObject(int num = 0)
     {
 
-      if (ScenesItems.rows[ActivatedShop].row.Length - 1 >= num)
+      if ((ScenesItems.rows[ActivatedShop].row.Length - 1 >= num) && (ItemNumber[ActivatedShop] != num) && (PlayerPrefs.GetInt("dollars") - (num + 1) * Cost) >= 0)
       {
         Destroy(ActiveObjects[ActivatedShop]);
         ActiveObjects[ActivatedShop] = Instantiate(ScenesItems.rows[ActivatedShop].row[num]);
-        ItemNumber[ActivatedShop] = num;
-      }
 
-/*      try
-      {
-        Destroy(ActiveObjects[ActivatedShop]);
-        ActiveObjects[ActivatedShop] = Instantiate(ScenesItems.rows[ActivatedShop].row[num]);
+        PlayerPrefs.SetInt("dollars", PlayerPrefs.GetInt("dollars") - (num + 1) * Cost);
+        PlayerPrefs.SetInt("ItemNumber" + ActivatedShop, num);
+
+        Coins.text = "" + PlayerPrefs.GetInt("dollars");
         ItemNumber[ActivatedShop] = num;
       }
-      catch (Exception e)
-      {
-        Debug.Log("nnn");
-      }*/
     }
 
-
-    /*void Update()
-    {
-      if (PreviousActivatedShop != ActivatedShop)
-      {
-        for (int i = 0; i < StoreItemsButton.Length; i++)
-        {
-
-        }
-      }
-    }*/
 }
