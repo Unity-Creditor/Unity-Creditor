@@ -343,6 +343,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StarsController
       objectReference: {fileID: 0}
+    - target: {fileID: 8996163950757360645, guid: a22d93edefcb218468cb093ffdf3a1eb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a22d93edefcb218468cb093ffdf3a1eb, type: 3}
 --- !u!224 &215478675 stripped
@@ -692,6 +697,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StarsController
       objectReference: {fileID: 0}
+    - target: {fileID: 8996163950757360645, guid: a22d93edefcb218468cb093ffdf3a1eb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a22d93edefcb218468cb093ffdf3a1eb, type: 3}
 --- !u!224 &396526216 stripped
@@ -916,6 +926,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StarsController
       objectReference: {fileID: 0}
+    - target: {fileID: 8996163950757360645, guid: a22d93edefcb218468cb093ffdf3a1eb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a22d93edefcb218468cb093ffdf3a1eb, type: 3}
 --- !u!1001 &506984533
@@ -1034,6 +1049,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StarsController
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996163950757360645, guid: a22d93edefcb218468cb093ffdf3a1eb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a22d93edefcb218468cb093ffdf3a1eb, type: 3}
@@ -1192,11 +1212,11 @@ MonoBehaviour:
   levelButton: 1
   currentLevel: 0
   maxScore: 2
-  creditType: 0
+  creditType: 1
   isArcade: 0
-  creditHistory: 0
+  creditHistory: 2
   stars: 0
-  mans: 0
+  mans: 30
   isComplited: 0
   localStars: 0
 --- !u!1 &604544233
@@ -1473,7 +1493,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.24313727, g: 0.24313727, b: 0.24313727, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -1788,6 +1808,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StarsController
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996163950757360645, guid: a22d93edefcb218468cb093ffdf3a1eb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a22d93edefcb218468cb093ffdf3a1eb, type: 3}
@@ -3161,11 +3186,11 @@ MonoBehaviour:
   levelButton: 1
   currentLevel: 0
   maxScore: 6
-  creditType: 0
+  creditType: 2
   isArcade: 0
-  creditHistory: 0
+  creditHistory: 2
   stars: 0
-  mans: 0
+  mans: 50
   isComplited: 0
   localStars: 0
 --- !u!1 &1695928374
@@ -3698,11 +3723,11 @@ MonoBehaviour:
   levelButton: 1
   currentLevel: 0
   maxScore: 2
-  creditType: 0
+  creditType: 1
   isArcade: 0
-  creditHistory: 0
+  creditHistory: 2
   stars: 0
-  mans: 0
+  mans: 20
   isComplited: 0
   localStars: 0
 --- !u!1 &1966560460
@@ -3854,11 +3879,11 @@ MonoBehaviour:
   levelButton: 1
   currentLevel: 0
   maxScore: 2
-  creditType: 0
+  creditType: 1
   isArcade: 0
-  creditHistory: 0
+  creditHistory: 1
   stars: 0
-  mans: 0
+  mans: 20
   isComplited: 0
   localStars: 0
 --- !u!1 &2017664610
@@ -4014,7 +4039,7 @@ MonoBehaviour:
   isArcade: 0
   creditHistory: 0
   stars: 0
-  mans: 0
+  mans: 60
   isComplited: 0
   localStars: 0
 --- !u!1 &2144154087
@@ -4288,5 +4313,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: StarsController
       objectReference: {fileID: 0}
+    - target: {fileID: 8996163950757360645, guid: a22d93edefcb218468cb093ffdf3a1eb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996163950757360647, guid: a22d93edefcb218468cb093ffdf3a1eb,
+        type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 677208407}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a22d93edefcb218468cb093ffdf3a1eb, type: 3}

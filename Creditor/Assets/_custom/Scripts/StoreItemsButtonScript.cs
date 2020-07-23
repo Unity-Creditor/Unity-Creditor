@@ -17,6 +17,7 @@ public class StoreItemsButtonScript : MonoBehaviour
 
     void TaskOnClick()
     {
-      CustomSceneControllerScript.Instance.ChangeActiveObject(TabNumber);
+        //CustomSceneControllerScript.Instance.ChangeActiveObject(TabNumber);
+        FindObjectOfType<CustomSceneControllerScript>().ChangeActiveObject(TabNumber);
     }
 }

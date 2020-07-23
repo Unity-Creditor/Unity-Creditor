@@ -13,6 +13,7 @@ public class RulesScript : MonoBehaviour /*Manager<RulesScript>*/
     public LaptopScript laptop;
     public CreditHistorySCR creditHistory;
     public NextVisiter nextVisiter;
+    public CreditTypeSCR creditType;
     public bool isEnd = false;
     public int rightMans = 0;
     public int mans = 0;
@@ -27,6 +28,7 @@ public class RulesScript : MonoBehaviour /*Manager<RulesScript>*/
         creditHistory = FindObjectOfType<CreditHistorySCR>();
         //winPanel.SetActive(false);
         nextVisiter = FindObjectOfType<NextVisiter>();
+        creditType = FindObjectOfType<CreditTypeSCR>();
         //PlayerPrefs.SetInt("globalMans", 5);
     }
     /*public void AwakeCopy()
@@ -40,7 +42,7 @@ public class RulesScript : MonoBehaviour /*Manager<RulesScript>*/
         if (RightSwipe)
         {
             if (PlayerPrefs.GetInt("creditType") == 0 && PlayerPrefs.GetInt("creditHistory") == 0 ||
-                PlayerPrefs.GetInt("creditType") == laptop.actualGraph && PlayerPrefs.GetInt("creditHistory")== creditHistory.actualHistory)
+                PlayerPrefs.GetInt("creditType") == creditType.actualType && PlayerPrefs.GetInt("creditHistory")== creditHistory.actualHistory)
             {
                 rightMans++;
                 Debug.Log(rightMans);

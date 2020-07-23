@@ -8,6 +8,9 @@ public class SwipeScript : MonoBehaviour
     public UnityEvent SwipeYes = new UnityEvent();
     public int Score = 0;
     bool MouseDown = false;
+    //public AudioSource yes;
+    //public AudioSource no;
+
     RulesScript rules;
     TaskSCR task;
 
@@ -30,7 +33,7 @@ public class SwipeScript : MonoBehaviour
             //GameObject.FindWithTag("GameController").GetComponent<RulesScript>().RightSpriteFunc();
             rules.RightSpriteFunc();
             //FindObjectOfType<RulesScript>().RightSpriteFunc();
-
+            FindObjectOfType<PlayerSCR>().PlayYes();
             Debug.Log("Yes");
             OnSwipe.Invoke();
             //SwipeYes.Invoke();
@@ -40,6 +43,7 @@ public class SwipeScript : MonoBehaviour
         {
             Debug.Log("No");
             OnSwipe.Invoke();
+            FindObjectOfType<PlayerSCR>().PlayNo();
             Destroy(gameObject);
         }
         else
