@@ -206,6 +206,8 @@ MonoBehaviour:
   - {fileID: 2350297534053388759, guid: 3166190413495254a97e30680de154ec, type: 3}
   - {fileID: 8507980137252276012, guid: 8140ef1ca6aeb27489e33f61d8235e36, type: 3}
   - {fileID: 7477005705412488926, guid: 9dd768d999fb20445bf2e57529505d6f, type: 3}
+  - {fileID: 7477005705412488926, guid: 61b88e95b29ffd840b6a4852a8334c66, type: 3}
+  - {fileID: 7477005705412488926, guid: c11329196001d394797acc8282432ca2, type: 3}
   spriteRenderer: {fileID: 0}
 --- !u!114 &2175547031915210762
 MonoBehaviour:
@@ -250,8 +252,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   Score: 0
-  yes: {fileID: 5871555748074499992}
-  no: {fileID: 4490214009415761237}
 --- !u!1 &5904890821476103266
 GameObject:
   m_ObjectHideFlags: 0
